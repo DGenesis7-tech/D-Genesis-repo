@@ -1,0 +1,8 @@
+Psedocode for coin guess!
+1. Import class SecureRandom for to generate random integers.
+2. Import Random number generator as an Object .
+3. Initialize the Random class and set to 2 which generates 0 and 1 as the only two probable outcomes.
+4. Prompt user to pick a guess 0 or 1
+5. Record users input as Heads or Tails for 0 or 1 respectively.
+6. Compare users input to the Random integer variables.
+7. Print result if User picked Heads or Tails
