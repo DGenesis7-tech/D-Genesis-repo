@@ -1,0 +1,14 @@
+variable_a = 27.5
+variable_b = 2
+addition_of_variables = variable_a + variable_b
+subtraction_of_variables = variable_a - variable_b
+multiplication_of_variables = variable_a * variable_b
+division_of_variables = variable_a / variable_b
+floor_division_of_variables = variable_a // variable_b
+variable_a_root_variable_b = variable_a ** variable_b
+print('27.5 + 2 = ', addition_of_variables)
+print('27.5 - 2 = ', subtraction_of_variables)
+print('27.5 * 2 = ', multiplication_of_variables)
+print('27.5 / 2 = ', division_of_variables)
+print('27.5 // 2 = ', floor_division_of_variables)
+print('27.5 ** 2 = ', variable_a_root_variable_b)

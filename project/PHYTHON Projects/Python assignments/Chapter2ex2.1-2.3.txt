@@ -1,0 +1,11 @@
+Chapter 2;
+
+Excercises;
+2.1 (a). x = 2
+    (b). Value of 2 + 2 is 4
+    (c). x =
+    (d). 5 = 5
+2.2 (ans). The data type (int) that reads integer input in the code is missing.
+2.3 (ans). if grade >= 90:
+	   	print('Congratulations! Your grade of ', grade , 'earns you an A in this course')
+2.4 ().
