@@ -1,13 +1,15 @@
-count = '*'
-for count in range(1):
-	print('*')
-	count += 1
-	for count in range(2):
-		print('*', end = '')
-		count -= 1
-		for count in range(3):
-			print('*', end = '')
-			count += 1
-
-	print()
-		 
+for star in range(10):
+	print(star * '*')
+	star += 1
+print()	
+for star in range(10, 0, -1):
+	print('*' * star)
+print()
+space = ' '
+star = '*'
+for space in range(10, 0, -1) and star in range(10):
+	space *= ' '
+	print(space)
+	print(star * '*')	
+		
+	
