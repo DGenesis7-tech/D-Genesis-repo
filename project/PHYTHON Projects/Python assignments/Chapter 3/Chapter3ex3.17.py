@@ -7,9 +7,17 @@ for star in range(10, 0, -1):
 print()
 space = ' '
 star = '*'
-for space in range(10, 0, -1) and star in range(10):
-	space *= ' '
-	print(space)
-	print(star * '*')	
+print()
 		
-	
+rows = 10
+for i in range(1, rows + 1):
+	space = rows - i
+	star = i
+	print(	space * ' ' + '*' * star)
+print()
+ 
+rows = 10
+for i in range(10, 0, -1):
+ 	space = rows - i 
+ 	star = i
+ 	print(' ' * space +  '*' * 	i)
