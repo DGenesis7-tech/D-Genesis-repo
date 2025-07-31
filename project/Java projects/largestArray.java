@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class largestArray{
-public static void main(String[] args){
+public static int main(String[] args){
 Scanner input = new Scanner(System.in);
 	
 	int[] number = {10,2,4,150,14,210};

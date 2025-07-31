@@ -1,0 +1,27 @@
+PSEUDOCODE FOR get_score => 
+
+Define get_score as a function without parameter
+Use while loop to prompt user to input an acceeptable grade and iterates if user inputs an unacceptable grade.
+Returns score when user inputs is valid and keep looping when it is not.
+Print wrong input when input does not meet condition 
+
+Import function get_score to get acess to the score returned, to get the grade assiged to the score
+Define calculate_grade as a function with score as its only parameter
+Assign grade_(a,b,c,d,e,f) to (80,70,50,40,35,0) respectively 
+use score to validate the right grade assigned to score
+store the return value of score in variable score
+store the return value of grade in variable grade
+
+
+import function get_score and function calculate grade to make their return values accessible in this program
+Defining get_feedback function to return feedback for the returned grade
+Assign different feedback to different grade
+store the returned feedback in variable feedback
+
+
+importing function get_score and function calculate grade and function get_feedback to make their return values accessible in this program
+call the functions to do their tasks and print the result 
+use while loop promt user if he wants to input another grade yes or no
+if yes keep looping
+if no end program
+
