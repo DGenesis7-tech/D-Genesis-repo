@@ -1,10 +1,10 @@
-for (let number = 1; number <= 1; number = number + 1){
-let col = (number - 1)
-console.log(number + " ")}
-for (let number = 2; number <= 4; number = number + 2){
-col = (number = number - 1)
-console.log(number + " " + col )}
-for (let number = 7; number <= 11; number = number + 4){
-console.log(number + " ")
-}
+let count1 = 1;
+let count2 = 1;
+for (count1 = 1; count1 < 6 ; count1++){
+for (count2 = 1; count2 <= count1 ; count2++){
+console.log(count2);
 
+}
+console.log(count2);
+
+}

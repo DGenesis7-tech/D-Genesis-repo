@@ -7,7 +7,7 @@ int a = 1;
 while(a <= 6){
 	int b = 1;
 	while(b <= a){
-		System.out.printf("%d ", b);
+		System.out.print(b + " ");
 	b = b + 1;
 	}
 System.out.println();
