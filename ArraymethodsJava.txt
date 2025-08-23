@@ -1,0 +1,9 @@
+Sorts the array in ascending order. = Arrays.sort(array)
+
+Converts the array to a readable string. = Arrays.toString(array)
+
+Creates a new array with the specified length. = Arrays.copyOf(array, newLength)
+
+Fills the entire array with a specific value. = Arrays.fill(array, value)
+
+Copies a specific range of the array. = Arrays.copyOfRange(array, from, to)
