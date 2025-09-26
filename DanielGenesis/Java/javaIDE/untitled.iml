@@ -7,6 +7,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/AC Test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Auto Bike Test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Movie Rating System" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/AC module" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/REFLECTION" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
