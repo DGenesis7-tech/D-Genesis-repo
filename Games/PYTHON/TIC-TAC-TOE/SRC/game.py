@@ -6,27 +6,27 @@ class Player:
 
 class Board:
     def __init__(self):
-        self.board = [['-', '-', '-'],
-                      ['-', '-', '-'],
-                      ['-', '-', '-'],
+        self.board = [[' ', ' ', ' '],
+                      [' ', ' ', ' '],
+                      [' ', ' ', ' '],
                       ]
 
     def board_display(self):
         for row in self.board:
             print(" | ".join(row))
-            print("~~~~~~~~~")
+            print("~~~~~")
 
     def position_symbol(self, position, symbol):
-        positions = [(0, 0), (0, 1), (1, 0),
-                     (1, 1), (1, 2), (0, 2),
-                     (2, 0), (2, 2), (2, 1)
-                     ]
+        positions = [(0, 0), (0, 1), (0, 2),
+                     (1, 0), (1, 1), (1, 2),
+                     (2, 0), (2, 1), (2, 2)]
 
         if 1 <= position <= 9:
             row, column = positions[position - 1]
-            if self.board[row][column] == '-':
-                self.board[row][column] = symbol
-                return True
+            if row < 0 or row >= len(self.board) or column < 0 or column >= len(self.board[0]):
+                if self.board[row][column] == ' ':
+                    self.board[row][column] = symbol
+                    return True
         return False
 
     def check_winner(self, symbol):
@@ -45,7 +45,7 @@ class Board:
     def full_board(self):
         for row in self.board:
             for space in row:
-                if space == '-':
+                if space == ' ':
                     return False
         return True
 
@@ -57,7 +57,7 @@ class GameDatabase:
     def save_game(self, board):
         with open(self.ttt_file, "w") as file:
             for row in board.board:
-                file.write("-".join(row) + "\n")
+                file.write(" ".join(row) + "\n")
 
     def load_game(self, board):
         try:
@@ -66,15 +66,14 @@ class GameDatabase:
                 for index in range(len(lines)):
                     board.board[index] = lines[index].strip().split()
         except FileNotFoundError:
-            print("File not found")
-            pass
+            print("No previous File found, starting a new one.")
 
 
 class Game:
-    def __init__(self, player1, player2):
-        self.player1 = player1
-        self.player2 = player2
-        self.current_player = player1
+    def __init__(self, player1, player2, symbol1="", symbol2=""):
+        self.player1 = Player(player1, symbol1)
+        self.player2 = Player(player2, symbol2)
+        self.current_player = self.player1
         self.board = Board()
         self.database = GameDatabase()
         self.database.load_game(self.board)
@@ -87,22 +86,23 @@ class Game:
 
     def take_turn(self, position):
         if self.board.position_symbol(position, self.current_player.symbol):
-            self.database.save_game(self.board)
             if self.board.check_winner(self.current_player.symbol):
                 return f"{self.current_player.name} won the game!"
             elif self.board.full_board():
                 return "Game ends in draw !"
             else:
                 self.change_player()
-                return f"Your move: {self.current_player.name}"
+                return "Next move"
         else:
             return "Invalid move, Try again !!!"
 
+    def __str__(self):
+        return f"Current player: {self.current_player.name} ({self.current_player.symbol})"
 
 def display_instructions():
     print("Welcome to Tic Tac Toe! =>> by Genesis")
     print("Players take turn to place their symbol (X or O) in a position numbered 1-9")
-    print("BOARD POSITIONS ==--\/")
+    print("BOARD POSITIONS ==")
     print("1 | 2 | 3")
     print("4 | 5 | 6")
     print("7 | 8 | 9")
@@ -119,6 +119,8 @@ def choose_symbol_pair():
         return pairs[choice - 1]
     return "X", "O"
 
+def __dir__():
+    return ["player1", "player2", "symbol1", "symbol2"]
 
 def main():
     player1_name = input("Enter Player 1 name: ")
@@ -127,12 +129,22 @@ def main():
     player1 = Player(player1_name, symbol1)
     player2 = Player(player2_name, symbol2)
 
-    game = Game(player1, player2)
+    game = Game(player1, player2, symbol1, symbol2)
 
     display_instructions()
 
     while True:
         game.board.board_display()
-        print(f"{game.player1.current_player.name}'s turn! - ({game.player1.current_player.symbol})")
-        po
-
+        print(f"{game.current_player.name}'s turn! - ({game.current_player.symbol})")
+        position = input("Enter position number (1-9): ")
+        if position.isdigit():
+            position = int(position)
+            if 1 <= position <= 9:
+                result = game.take_turn(position)
+                print(result)
+                if result != "Next move":
+                    game.board.board_display()
+            else:
+                print("Invalid position number, Try again!, Please enter a valid position number ")
+        else:
+            print("Invalid position number, Try again!, Please enter a valid position number ")
