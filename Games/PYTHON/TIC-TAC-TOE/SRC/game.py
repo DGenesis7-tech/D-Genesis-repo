@@ -3,6 +3,7 @@ class Player:
         self.name = name
         self.symbol = symbol
 
+
 class Board:
     def __init__(self):
         self.board = [['-', '-', '-'],
@@ -49,8 +50,89 @@ class Board:
         return True
 
 
+class GameDatabase:
+    def __init__(self, ttt_file="game_data.txt"):
+        self.ttt_file = ttt_file
+
+    def save_game(self, board):
+        with open(self.ttt_file, "w") as file:
+            for row in board.board:
+                file.write("-".join(row) + "\n")
+
+    def load_game(self, board):
+        try:
+            with open(self.ttt_file, "r") as file:
+                lines = file.readlines()
+                for index in range(len(lines)):
+                    board.board[index] = lines[index].strip().split()
+        except FileNotFoundError:
+            print("File not found")
+            pass
 
 
+class Game:
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
+        self.current_player = player1
+        self.board = Board()
+        self.database = GameDatabase()
+        self.database.load_game(self.board)
+
+    def change_player(self):
+        if self.current_player == self.player1:
+            self.current_player = self.player2
+        else:
+            self.current_player = self.player1
+
+    def take_turn(self, position):
+        if self.board.position_symbol(position, self.current_player.symbol):
+            self.database.save_game(self.board)
+            if self.board.check_winner(self.current_player.symbol):
+                return f"{self.current_player.name} won the game!"
+            elif self.board.full_board():
+                return "Game ends in draw !"
+            else:
+                self.change_player()
+                return f"Your move: {self.current_player.name}"
+        else:
+            return "Invalid move, Try again !!!"
 
 
+def display_instructions():
+    print("Welcome to Tic Tac Toe! =>> by Genesis")
+    print("Players take turn to place their symbol (X or O) in a position numbered 1-9")
+    print("BOARD POSITIONS ==--\/")
+    print("1 | 2 | 3")
+    print("4 | 5 | 6")
+    print("7 | 8 | 9")
+    print("To make a move, enter the number corresponding to the position")
+
+
+def choose_symbol_pair():
+    pairs = [("X", "O"), ("A", "B"), ("*", "#"), ("@", "$")]
+    print("Choose the symbol pair you want to play:")
+    for index, pair in enumerate(pairs, 1):
+        print(f"{index}. {pair[0]} and {pair[1]}")
+    choice = int(input("Choose a number (1-4) to select your pair: "))
+    if 1 <= choice <= len(pairs):
+        return pairs[choice - 1]
+    return "X", "O"
+
+
+def main():
+    player1_name = input("Enter Player 1 name: ")
+    player2_name = input("Enter Player 2 name: ")
+    symbol1, symbol2 = choose_symbol_pair()
+    player1 = Player(player1_name, symbol1)
+    player2 = Player(player2_name, symbol2)
+
+    game = Game(player1, player2)
+
+    display_instructions()
+
+    while True:
+        game.board.board_display()
+        print(f"{game.player1.current_player.name}'s turn! - ({game.player1.current_player.symbol})")
+        po
 
