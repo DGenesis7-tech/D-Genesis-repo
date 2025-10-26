@@ -1,7 +1,18 @@
-import game
+from game import Game
 
-def start_game():
-    game.main()
+if __name__ == "__main__":
+    def __dir__():
+        game = Game(player1="", player2="", symbol1="", symbol2="")
+        return game
 
-start_game()
+    __dir__().main()
+
+
+
+
+
+
+
+
+
 

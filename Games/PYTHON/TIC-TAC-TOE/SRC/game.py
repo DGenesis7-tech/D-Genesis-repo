@@ -8,8 +8,7 @@ class Board:
     def __init__(self):
         self.board = [[' ', ' ', ' '],
                       [' ', ' ', ' '],
-                      [' ', ' ', ' '],
-                      ]
+                      [' ', ' ', ' ']]
 
     def board_display(self):
         for row in self.board:
@@ -23,10 +22,18 @@ class Board:
 
         if 1 <= position <= 9:
             row, column = positions[position - 1]
-            if row < 0 or row >= len(self.board) or column < 0 or column >= len(self.board[0]):
+
+            if 0 <= row < len(self.board) and 0 <= column < len(self.board[0]):
                 if self.board[row][column] == ' ':
                     self.board[row][column] = symbol
                     return True
+                else:
+                    print(f"Position ({row}, {column}) is already occupied!")
+            else:
+                print(f"Invalid row or column index: {row}, {column}")
+        else:
+            print(f"Invalid position number: {position}. Must be between 1 and 9.")
+
         return False
 
     def check_winner(self, symbol):
@@ -49,34 +56,14 @@ class Board:
                     return False
         return True
 
-
-class GameDatabase:
-    def __init__(self, ttt_file="game_data.txt"):
-        self.ttt_file = ttt_file
-
-    def save_game(self, board):
-        with open(self.ttt_file, "w") as file:
-            for row in board.board:
-                file.write(" ".join(row) + "\n")
-
-    def load_game(self, board):
-        try:
-            with open(self.ttt_file, "r") as file:
-                lines = file.readlines()
-                for index in range(len(lines)):
-                    board.board[index] = lines[index].strip().split()
-        except FileNotFoundError:
-            print("No previous File found, starting a new one.")
-
-
 class Game:
     def __init__(self, player1, player2, symbol1="", symbol2=""):
         self.player1 = Player(player1, symbol1)
         self.player2 = Player(player2, symbol2)
+        self.pair = self.choose_symbol_pair()
         self.current_player = self.player1
         self.board = Board()
-        self.database = GameDatabase()
-        self.database.load_game(self.board)
+
 
     def change_player(self):
         if self.current_player == self.player1:
@@ -96,55 +83,54 @@ class Game:
         else:
             return "Invalid move, Try again !!!"
 
-    def __str__(self):
-        return f"Current player: {self.current_player.name} ({self.current_player.symbol})"
+    def display_instructions(self):
+        print("Welcome to Tic Tac Toe! =>> by Genesis")
+        print("Players take turn to place their symbol (X or O) in a position numbered 1-9")
+        print("BOARD POSITIONS ==")
+        print("1 | 2 | 3")
+        print("4 | 5 | 6")
+        print("7 | 8 | 9")
+        print("To make a move, enter the number corresponding to the position")
+        return self
 
-def display_instructions():
-    print("Welcome to Tic Tac Toe! =>> by Genesis")
-    print("Players take turn to place their symbol (X or O) in a position numbered 1-9")
-    print("BOARD POSITIONS ==")
-    print("1 | 2 | 3")
-    print("4 | 5 | 6")
-    print("7 | 8 | 9")
-    print("To make a move, enter the number corresponding to the position")
+    @staticmethod
+    def choose_symbol_pair():
+        pairs = [("X", "O"), ("A", "B"), ("*", "#"), ("@", "$")]
+        print("Choose the symbol pair you want to play:")
+        for index, pair in enumerate(pairs, 1):
+            print(f"{index}. {pair[0]} and {pair[1]}")
+        choice = int(input("Choose a number (1-4) to select your pair: "))
+        if 1 <= choice <= len(pairs):
+            pairs = pairs[choice - 1]
+        else:
+            pairs = [("X", "O")]
+        return pairs
+
+    def main(self):
+        player1_name = input("Enter Player 1 name: ")
+        player2_name = input("Enter Player 2 name: ")
+        symbol1, symbol2 = self.pair
+        player1 = Player(player1_name, symbol1)
+        player2 = Player(player2_name, symbol2)
+
+        game = Game(player1, player2, symbol1, symbol2)
+
+        self.display_instructions()
 
 
-def choose_symbol_pair():
-    pairs = [("X", "O"), ("A", "B"), ("*", "#"), ("@", "$")]
-    print("Choose the symbol pair you want to play:")
-    for index, pair in enumerate(pairs, 1):
-        print(f"{index}. {pair[0]} and {pair[1]}")
-    choice = int(input("Choose a number (1-4) to select your pair: "))
-    if 1 <= choice <= len(pairs):
-        return pairs[choice - 1]
-    return "X", "O"
-
-def __dir__():
-    return ["player1", "player2", "symbol1", "symbol2"]
-
-def main():
-    player1_name = input("Enter Player 1 name: ")
-    player2_name = input("Enter Player 2 name: ")
-    symbol1, symbol2 = choose_symbol_pair()
-    player1 = Player(player1_name, symbol1)
-    player2 = Player(player2_name, symbol2)
-
-    game = Game(player1, player2, symbol1, symbol2)
-
-    display_instructions()
-
-    while True:
-        game.board.board_display()
-        print(f"{game.current_player.name}'s turn! - ({game.current_player.symbol})")
-        position = input("Enter position number (1-9): ")
-        if position.isdigit():
-            position = int(position)
-            if 1 <= position <= 9:
-                result = game.take_turn(position)
-                print(result)
-                if result != "Next move":
-                    game.board.board_display()
+        while True:
+            game.board.board_display()
+            print(f"{game.current_player.name}'s turn! - ({game.current_player.symbol})").__str__()
+            position = input("Enter position number (1-9): ")
+            if position.isdigit():
+                position = int(position)
+                if 1 <= position <= 9:
+                    result = game.take_turn(position)
+                    print(result)
+                    if result != "Next move":
+                        game.board.board_display()
+                        break
+                else:
+                    print("Invalid position number, Try again!, Please enter a valid position number ")
             else:
                 print("Invalid position number, Try again!, Please enter a valid position number ")
-        else:
-            print("Invalid position number, Try again!, Please enter a valid position number ")
