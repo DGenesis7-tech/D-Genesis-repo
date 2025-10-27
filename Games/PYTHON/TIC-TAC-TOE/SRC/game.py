@@ -1,7 +1,11 @@
+
 class Player:
     def __init__(self, name, symbol):
         self.name = name
         self.symbol = symbol
+
+    def __repr__(self):
+        return f"Player {self.name}"
 
 
 class Board:
@@ -57,10 +61,10 @@ class Board:
         return True
 
 class Game:
-    def __init__(self, player1, player2, symbol1="", symbol2=""):
+    def __init__(self, player1, player2, symbol1="", symbol2="", pair=[("", "")]):
         self.player1 = Player(player1, symbol1)
         self.player2 = Player(player2, symbol2)
-        self.pair = self.choose_symbol_pair()
+        self.pair = [("", "")]
         self.current_player = self.player1
         self.board = Board()
 
@@ -85,7 +89,7 @@ class Game:
 
     def display_instructions(self):
         print("Welcome to Tic Tac Toe! =>> by Genesis")
-        print("Players take turn to place their symbol (X or O) in a position numbered 1-9")
+        print("Players take turn to place their symbol or default(X or O) in a position numbered 1-9")
         print("BOARD POSITIONS ==")
         print("1 | 2 | 3")
         print("4 | 5 | 6")
@@ -93,8 +97,8 @@ class Game:
         print("To make a move, enter the number corresponding to the position")
         return self
 
-    @staticmethod
-    def choose_symbol_pair():
+
+    def choose_symbol_pair(self):
         pairs = [("X", "O"), ("A", "B"), ("*", "#"), ("@", "$")]
         print("Choose the symbol pair you want to play:")
         for index, pair in enumerate(pairs, 1):
@@ -109,7 +113,7 @@ class Game:
     def main(self):
         player1_name = input("Enter Player 1 name: ")
         player2_name = input("Enter Player 2 name: ")
-        symbol1, symbol2 = self.pair
+        symbol1, symbol2 = self.choose_symbol_pair()
         player1 = Player(player1_name, symbol1)
         player2 = Player(player2_name, symbol2)
 
@@ -120,7 +124,7 @@ class Game:
 
         while True:
             game.board.board_display()
-            print(f"{game.current_player.name}'s turn! - ({game.current_player.symbol})").__str__()
+            print(f"{game.current_player.name}'s turn! - ({game.current_player.symbol})")
             position = input("Enter position number (1-9): ")
             if position.isdigit():
                 position = int(position)
