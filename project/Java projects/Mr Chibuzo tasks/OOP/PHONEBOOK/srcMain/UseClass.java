@@ -135,7 +135,7 @@ public class UseClass {
 
             int option = 0;
             System.out.println("Select a number between 1 and 2");
-            while (option == 4) {
+            while (option != 4) {
                 option = input.nextInt();
 
                 switch (option) {
