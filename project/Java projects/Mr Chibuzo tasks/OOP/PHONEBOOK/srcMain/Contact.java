@@ -1,9 +1,9 @@
 public class Contact {
     String name;
     String email;
-    String phone;
+    long phone;
 
-    public Contact(String name , String email, String phone) {
+    public Contact(String name , String email, long phone) {
         this.name = name;
         this.email = email;
         this.phone = setPhoneNum(phone);
@@ -25,17 +25,22 @@ public class Contact {
         this.email = email;
     }
 
-    public String getPhoneNum() {
+    public long getPhoneNum() {
         return phone;
     }
 
-    public String setPhoneNum(String phone) {
-        if (phone.length() != 11) {
-            System.out.println("INVALID PHONE NUMBER, LENGTH EXCEEDED");
-            return null;
+    public long setPhoneNum(long phoneNum) {
+        boolean isNum = false;
+        while (true) {
+            if (phoneNum < 1000000000 || phoneNum > 9999999999L) {
+                System.out.println("INVALID PHONE NUMBER, INVALID RANGE");
+            }
+            else {
+                isNum = true;
+                System.out.println("Created successfully!");
+                return phoneNum;
+            }
         }
-        this.phone = phone;
-        return phone;
     }
 
 }

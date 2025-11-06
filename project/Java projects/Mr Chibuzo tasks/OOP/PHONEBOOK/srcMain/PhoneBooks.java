@@ -17,7 +17,7 @@ public class PhoneBooks {
         return false;
     }
 
-    public void setPhoneBook(String name, String id, String email) {
+    public void setPhoneBook(String name, String email, String id ) {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.setName(name);
         phoneBook.setId(id);
@@ -33,6 +33,20 @@ public class PhoneBooks {
 
     public List<PhoneBook> getPhoneBooks() {
         return phoneBooks;
+    }
+
+    public PhoneBook getPhoneBookById(String id) {
+        for (PhoneBook phoneBook : phoneBooks) {
+            if (phoneBook.getId().equals(id)) {
+                isValidId(id);
+                return phoneBook;
+            }
+            else {
+                System.out.println("ID not found!!!!");
+                return null;
+            }
+        }
+        return null;
     }
 
     public void deletePhoneBook(String id) {
