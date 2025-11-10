@@ -48,18 +48,17 @@ public class Owner {
         return phone;
     }
 
-    public long setPhone(long phone) {
+    public void setPhone(long phone) {
         boolean isNum = false;
-            while (true) {
-                if ((phone < 1000000000) || (phone > 9999999999L)) {
-                    System.out.println("INVALID PHONE NUMBER, INVALID RANGE");
-                }
-                else {
-                    isNum = true;
-                    System.out.println("Created successfully!");
-                    return phone;
-                }
-            }
+        if ((phone <= 999999999L) || (phone > 9999999999L)) {
+            System.out.println("INVALID PHONE NUMBER, INVALID RANGE");
+        }
+        else {
+            this.phone = phone;
+            System.out.println("Created successfully!");
+        }
+
+
     }
 
     public String getEmail() {

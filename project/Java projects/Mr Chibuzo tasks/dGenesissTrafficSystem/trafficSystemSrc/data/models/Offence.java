@@ -1,6 +1,7 @@
 package data.models;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.reverse;
 
 public enum Offence {
     DRUNK_DRIVING("Driving under influence", 50000),
@@ -30,7 +31,7 @@ public enum Offence {
             }
         }
 
-
+        return 4000;
     }
 }
 

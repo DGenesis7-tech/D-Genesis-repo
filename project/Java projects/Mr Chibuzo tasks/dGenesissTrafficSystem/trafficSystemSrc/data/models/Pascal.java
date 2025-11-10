@@ -71,8 +71,17 @@ public class Pascal {
         for (Ticket ticket : tickets) {
             System.out.println("Please state the offence you would like to settle: : ");
             String state = input.next();
-            boolean paid = ticket.isHasPaid();
+
+            System.out.println("Please state the amount you would like to pay: ");
+            int amount = input.nextInt();
+
+            ticket.setHasPaid(state, amount);
+            boolean hasPaid = ticket.isHasPaid();
+            if (hasPaid) {
+                System.out.println("PAID");
+            }
         }
+
     }
 
 }

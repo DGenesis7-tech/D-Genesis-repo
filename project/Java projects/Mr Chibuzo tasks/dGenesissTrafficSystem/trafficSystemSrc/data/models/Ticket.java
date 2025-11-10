@@ -43,10 +43,14 @@ public class Ticket {
         return hasPaid;
     }
 
-    public void setHasPaid(int describe) {
-        offence.
-        if (payment < o ) {}
-        this.hasPaid = hasPaid;
+    public void setHasPaid(String describe, int payment) {
+        int thePrice = offence.price(describe);
+        if (payment < thePrice ) {
+            System.out.println("The payment is less than the price of the offence");
+        }
+        else {
+            hasPaid = true;
+        }
     }
 
     public Officer getIssuer() {
