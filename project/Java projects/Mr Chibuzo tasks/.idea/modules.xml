@@ -3,7 +3,18 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mr Chibuzo tasks.iml" filepath="$PROJECT_DIR$/Mr Chibuzo tasks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/controllers/controllers.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/controllers/controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dGenesissTrafficSystem/dGenesissTrafficSystem.iml" filepath="$PROJECT_DIR$/dGenesissTrafficSystem/dGenesissTrafficSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/data/data.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/dtos/dtos.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/dtos/dtos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/exception/exception.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/exception/exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phoneBook oop/phoneBook oop.iml" filepath="$PROJECT_DIR$/phoneBook oop/phoneBook oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/services/services.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/services/services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/src/src.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/src/src.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/srcs.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/srcs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dGenesissTrafficSystem/testTrafficSystem/testTrafficSystem.iml" filepath="$PROJECT_DIR$/dGenesissTrafficSystem/testTrafficSystem/testTrafficSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dGenesissTrafficSystem/trafficSystemSrc/trafficSystemSrc.iml" filepath="$PROJECT_DIR$/dGenesissTrafficSystem/trafficSystemSrc/trafficSystemSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trafficSystemPrototype/srcs/utils/utils.iml" filepath="$PROJECT_DIR$/trafficSystemPrototype/srcs/utils/utils.iml" />
     </modules>
   </component>
 </project>
