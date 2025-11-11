@@ -43,7 +43,7 @@ public class Vehicle {
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public void setModel(String model) {

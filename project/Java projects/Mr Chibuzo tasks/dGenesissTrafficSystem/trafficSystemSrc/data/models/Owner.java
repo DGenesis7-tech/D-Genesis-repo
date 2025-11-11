@@ -41,7 +41,15 @@ public class Owner {
     }
 
     public void setGender(String gender) {
-       this.gender = Gender.valueOf(gender);
+       if (gender.equals("M")) {
+           this.gender = Gender.MALE;
+       }
+       else if (gender.equals("F")) {
+           this.gender = Gender.FEMALE;
+       }
+       else {
+           this.gender = Gender.CURSED;
+       }
     }
 
     public long getPhone() {

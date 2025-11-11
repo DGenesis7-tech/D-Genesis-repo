@@ -1,3 +1,4 @@
+import data.models.Gender;
 import data.models.Owner;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,7 @@ public class OwnerTest {
     public void OwnerTestToSetEmail() {
         Owner owner = new Owner();
         owner.setName("Daniel");
-        assertEquals("Daniel", owner.getEmail());
+        assertEquals("Daniel", owner.getName());
 
         owner.setEmail("DanielOkp328@gmail.com");
         String email = owner.getEmail();
@@ -33,6 +34,36 @@ public class OwnerTest {
 
         owner.setPhone(phone);
         assertEquals(phone, owner.getPhone());
+    }
+
+    @Test
+    public void OwnerTestToSetGender() {
+        Owner owner = new Owner();
+        owner.setName("Daniel");
+        assertEquals("Daniel", owner.getName());
+
+        owner.setGender("M");
+        assertEquals(Gender.MALE, owner.getGender());
+    }
+
+    @Test
+    public void OwnerTestToSetAddress() {
+        Owner owner = new Owner();
+        owner.setName("Daniel");
+        assertEquals("Daniel", owner.getName());
+
+        owner.setAddress("Victoria Island Lagos");
+        assertEquals("Victoria Island Lagos", owner.getAddress());
+    }
+
+    @Test
+    public void OwnerTestToSetId() {
+        Owner owner = new Owner();
+        owner.setName("Daniel");
+        assertEquals("Daniel", owner.getName());
+
+        owner.setId("123Genesis");
+        assertEquals("123Genesis", owner.getId());
     }
 
 }
