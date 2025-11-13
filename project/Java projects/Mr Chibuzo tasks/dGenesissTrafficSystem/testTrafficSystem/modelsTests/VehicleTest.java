@@ -1,6 +1,8 @@
 import data.models.Vehicle;
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VehicleTest {
@@ -32,6 +34,10 @@ public class VehicleTest {
     @Test
     public void vehicleTestToSetYear() {
         Vehicle vehicle = new Vehicle();
-        vehicle.setName(
+        vehicle.setName("Toyota");
+        assertEquals("Toyota", vehicle.getName());
+
+        vehicle.setYear(Year.parse("1999"));
+        assertEquals(Year.parse("1999"), vehicle.getYear());
     }
 }

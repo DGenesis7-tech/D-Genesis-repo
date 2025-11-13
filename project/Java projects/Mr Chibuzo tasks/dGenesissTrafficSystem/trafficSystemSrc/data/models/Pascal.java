@@ -2,7 +2,7 @@ package data.models;
 
 import data.repositories.Vehicles;
 
-import java.util.ArrayList;
+import java.time.Year;
 import java.util.List;
 import java.util.Scanner;
 
@@ -46,12 +46,43 @@ public class Pascal {
 
     public void registerVehicle(Scanner input) {
         this.vehicle = new Vehicle();
-        vehicles.save(vehicle, input);
+        System.out.println("Please enter your vehicle name: ");
+        String name = input.nextLine();
+        this.vehicle.setName(name);
+
+        System.out.println("Please enter your vehicle model: ");
+        String model = input.nextLine();
+        this.vehicle.setModel(model);
+
+        System.out.println("Please enter your vehicle plate number: ");
+        String plateNumber = input.nextLine();
+        this.vehicle.setPlateNumber(plateNumber);
+
+        System.out.println("Please enter your vehicle year: ");
+        Year year = Year.parse(input.nextLine());
+        this.vehicle.setYear(year);
+
+
+        vehicles.save(vehicle);
     }
 
     public void updateVehicle(Scanner input) {
-        this.vehicle = new Vehicle();
-        vehicles.save(vehicle, input);
+
+        System.out.println("Please enter your vehicle name: ");
+        String name = input.nextLine();
+        vehicle.setName(name);
+
+        System.out.println("Please enter your vehicle model: ");
+        String model = input.nextLine();
+        vehicle.setModel(model);
+
+        System.out.println("Please enter your vehicle plate number: ");
+        String plateNumber = input.nextLine();
+        vehicle.setPlateNumber(plateNumber);
+
+        System.out.println("Please enter your vehicle year: ");
+        Year year = Year.parse(input.nextLine());
+        vehicles.save(vehicle);
     }
 
     public void viewTickets(int id) {

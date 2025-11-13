@@ -1,51 +1,53 @@
 package data.repositories;
 
+import data.models.Owner;
 import data.models.Vehicle;
 
 import java.time.Year;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Vehicles implements VehicleRepository{
-    private Vehicle vehicle;
-    private List<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicles;
     private int id = 100;
+    private int count = 0;
 
-    public Vehicles(Vehicle vehicle, int id) {
-        this.vehicle = vehicle;
-        this.vehicles = new ArrayList<>();
+    public Vehicles(Vehicle vehicle, int id, int count) {
+        this.vehicles = new ArrayList<>(0);
         this.id = id;
+        this.count = count;
+
+    }
+
+    public Vehicles() {
     }
 
     @Override
-    public Vehicle save(Vehicle vehicle, Scanner input) {
-        for (Vehicle object : vehicles) {
-            if (vehicle == object) {
-                System.out.println("Enter new name");
-                String name = input.nextLine();
-                System.out.println("Enter new model");
-                String model = input.nextLine();
-                System.out.println("Enter new year");
-                Year newYear = Year.of(input.nextInt());
-                System.out.println("Enter new plate number");
-                String plateNumber = input.nextLine();
-
-                updateVehicle(name, model, newYear, plateNumber);
+    public Vehicle save(Vehicle vehicle) {
+        for (int index = 0; index < vehicles.size(); index++) {
+            if (vehicle.equals(vehicles.get(index))) {
+                updateVehicle(vehicle);
+                this.count++;
             }
-            else  {
+            else {
                 vehicles.add(vehicle);
-                count();
+
+                this.count++;
             }
         }
-        return vehicle;
+            return vehicle;
     }
 
-    private void updateVehicle(String newName, String newModel, Year newYear, String newPlateNumber) {
+    public void updateVehicle(Vehicle vehicle) {
+        String newName = vehicle.getName();
+        String newModel = vehicle.getModel();
+        Year newYear = vehicle.getYear();
+        String newPlateNumber = vehicle.getPlateNumber();
         vehicle.setName(newName);
         vehicle.setModel(newModel);
         vehicle.setYear(newYear);
         vehicle.setPlateNumber(newPlateNumber);
+        vehicle.setOwner(new Owner());
+        this.vehicles.add(vehicle);
     }
 
     @Override
@@ -55,11 +57,11 @@ public class Vehicles implements VehicleRepository{
                 return vehicles.get(index);
             }
         }
-        return vehicle;
+        return vehicles.get(id) ;
     }
 
     @Override
-    public List<Vehicle> findAll() {
+    public ArrayList<Vehicle> findAll() {
         return vehicles;
     }
 
@@ -94,8 +96,15 @@ public class Vehicles implements VehicleRepository{
 
     @Override
     public long count() {
-        return vehicles.size();
+       return this.count = vehicles.size();
+    }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public int getCount() {
+        return this.count;
     }
 
     public void setId() {
