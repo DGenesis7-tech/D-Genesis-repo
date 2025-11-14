@@ -37,7 +37,7 @@ public class Vehicle {
         return owner;
     }
 
-    public void setOwner(Owner owner) {
+    public void setOwner(String owner) {
 
         this.owner = owner;
     }

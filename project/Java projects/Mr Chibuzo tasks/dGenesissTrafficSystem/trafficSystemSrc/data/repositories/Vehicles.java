@@ -5,17 +5,18 @@ import data.models.Vehicle;
 
 import java.time.Year;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Vehicles implements VehicleRepository{
-    private ArrayList<Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
     private int id = 100;
     private int count = 0;
 
     public Vehicles(Vehicle vehicle, int id, int count) {
-        this.vehicles = new ArrayList<>(0);
         this.id = id;
         this.count = count;
-
+        this.vehicles = new ArrayList<>(1);
+        this.vehicles.add(vehicle);
     }
 
     public Vehicles() {
@@ -23,31 +24,22 @@ public class Vehicles implements VehicleRepository{
 
     @Override
     public Vehicle save(Vehicle vehicle) {
-        for (int index = 0; index < vehicles.size(); index++) {
-            if (vehicle.equals(vehicles.get(index))) {
-                updateVehicle(vehicle);
-                this.count++;
-            }
-            else {
+        for (int index = 0; index <= vehicles.size(); index++) {
+            if (!vehicle.equals(vehicles.get(index))) {
                 vehicles.add(vehicle);
-
-                this.count++;
             }
+            this.count++;
         }
-            return vehicle;
+        return vehicle;
     }
 
     public void updateVehicle(Vehicle vehicle) {
-        String newName = vehicle.getName();
-        String newModel = vehicle.getModel();
-        Year newYear = vehicle.getYear();
-        String newPlateNumber = vehicle.getPlateNumber();
-        vehicle.setName(newName);
+        vehicles.remove(vehicle);
+        vehicle.setName(String newName);
         vehicle.setModel(newModel);
         vehicle.setYear(newYear);
         vehicle.setPlateNumber(newPlateNumber);
-        vehicle.setOwner(new Owner());
-        this.vehicles.add(vehicle);
+        vehicle.setOwner(String.valueOf(new Owner()));
     }
 
     @Override
@@ -62,9 +54,8 @@ public class Vehicles implements VehicleRepository{
 
     @Override
     public ArrayList<Vehicle> findAll() {
-        return vehicles;
+        return this.vehicles;
     }
-
     @Override
     public void deleteById(int id) {
         for (int index = 0; index < vehicles.size(); index++) {
@@ -107,10 +98,13 @@ public class Vehicles implements VehicleRepository{
         return this.count;
     }
 
-    public void setId() {
-        for (int index = 0; index < vehicles.size(); index++) {
-            this.id += vehicles.size();
+    public void setId(Vehicle vehicle) {
+        for (int index = 0; index <= vehicles.size(); index++) {
+            if (vehicle == vehicles.get(index)) {
+                this.id = this.id + index;
+            }
         }
+
     }
 
     public int getId() {
