@@ -19,6 +19,14 @@ public class Owner {
 
     public Owner() {}
 
+    public Owner(String name, String address, String mail, long phoneNumber, Gender gender) {
+        this.name = name;
+        this.address = address;
+        this.phone = phoneNumber;
+        this.gender = gender;
+        this.email = mail;
+    }
+
 
     public String getName() {
         return name;
@@ -41,10 +49,10 @@ public class Owner {
     }
 
     public void setGender(String gender) {
-       if (gender.equals("M")) {
+       if (gender.equals("Male")) {
            this.gender = Gender.MALE;
        }
-       else if (gender.equals("F")) {
+       else if (gender.equals("Female")) {
            this.gender = Gender.FEMALE;
        }
        else {

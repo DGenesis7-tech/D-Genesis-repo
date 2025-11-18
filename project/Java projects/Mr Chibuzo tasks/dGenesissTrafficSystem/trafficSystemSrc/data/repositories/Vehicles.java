@@ -1,83 +1,65 @@
 package data.repositories;
 
-import data.models.Owner;
+import data.models.Gender;
 import data.models.Vehicle;
 
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vehicles implements VehicleRepository{
-    private ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
-    private int id = 100;
-    private int count = 0;
+public class Vehicles implements VehicleRepository {
 
-    public Vehicles(Vehicle vehicle, int id, int count) {
-        this.id = id;
-        this.count = count;
-        this.vehicles = new ArrayList<>(1);
-        this.vehicles.add(vehicle);
-    }
-
-    public Vehicles() {
-    }
+    private List<Vehicle> vehicles = new ArrayList<>();
+    private final int repoId = 100;
 
     @Override
     public Vehicle save(Vehicle vehicle) {
-        for (int index = 0; index <= vehicles.size(); index++) {
-            if (!vehicle.equals(vehicles.get(index))) {
-                vehicles.add(vehicle);
+        for (Vehicle veh : vehicles) {
+            if (veh.getPlateNumber().equalsIgnoreCase(vehicle.getPlateNumber())) {
+                System.out.println("Vehicle with plate number " + veh.getPlateNumber() + " already exists");
+                return veh;
             }
-            this.count++;
         }
+        vehicles.add(vehicle);
         return vehicle;
-    }
-
-    public void updateVehicle(Vehicle vehicle) {
-        vehicles.remove(vehicle);
-        vehicle.setName(String newName);
-        vehicle.setModel(newModel);
-        vehicle.setYear(newYear);
-        vehicle.setPlateNumber(newPlateNumber);
-        vehicle.setOwner(String.valueOf(new Owner()));
     }
 
     @Override
     public Vehicle findById(int id) {
-        for (int index = 0; index < vehicles.size(); index++) {
-            if (id == index) {
-                return vehicles.get(index);
-            }
+        int index = id - this.repoId;
+
+        if (index < 0 || index >= vehicles.size()) {
+            System.out.println("Vehicle with id " + id + " does not exist");
+            return null;
         }
-        return vehicles.get(id) ;
+        return vehicles.get(index);
     }
 
     @Override
     public ArrayList<Vehicle> findAll() {
-        return this.vehicles;
+        return new ArrayList<>(vehicles);
     }
+
     @Override
     public void deleteById(int id) {
-        for (int index = 0; index < vehicles.size(); index++) {
-            if (id == index) {
-                vehicles.remove(vehicles.get(index));
-                System.out.println("Vehicle has been deleted");
-            }
-            else {
-                System.out.println("invalid id");
+        int index = id - this.repoId;
+
+        if (index < 0 || index >= vehicles.size()) {
+            System.out.println("Vehicle ID " + id + " not found.");
+            return;
         }
-        }
+
+        vehicles.remove(index);
+        System.out.println("Vehicle with id " + id + " has been deleted.");
     }
 
     @Override
     public void delete(Vehicle vehicle) {
-        for (Vehicle object : vehicles) {
-            if (vehicle == object) {
-                vehicles.remove(object);
-                System.out.println("Vehicle has been deleted");
-            }
+        if (vehicles.remove(vehicle)) {
+            System.out.println("Vehicle deleted successfully.");
+        } else {
+            System.out.println("Vehicle not found.");
         }
-        System.out.println("Vehicle not found");
     }
 
     @Override
@@ -87,27 +69,20 @@ public class Vehicles implements VehicleRepository{
 
     @Override
     public long count() {
-       return this.count = vehicles.size();
+        return vehicles.size();
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
+    public void updateVehicle(Vehicle vehicle, String newName, String newPlateNumber, Year newYear, String newModel, String newOwnerName, String newAddress, String newEmail, long newPhoneNumber, Gender newGender) {
 
-    public int getCount() {
-        return this.count;
-    }
-
-    public void setId(Vehicle vehicle) {
-        for (int index = 0; index <= vehicles.size(); index++) {
-            if (vehicle == vehicles.get(index)) {
-                this.id = this.id + index;
-            }
+        if (!vehicles.contains(vehicle)) {
+            System.out.println("Vehicle " + vehicle.getPlateNumber() + " not found.");
+            return;
         }
 
-    }
-
-    public int getId() {
-        return this.id;
+        vehicle.setName(newName);
+        vehicle.setPlateNumber(newPlateNumber);
+        vehicle.setYear(newYear);
+        vehicle.setModel(newModel);
+        vehicle.setOwner(newOwnerName, newAddress, newEmail, newPhoneNumber, newGender);
     }
 }

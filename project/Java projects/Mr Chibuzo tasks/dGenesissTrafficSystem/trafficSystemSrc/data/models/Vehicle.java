@@ -37,9 +37,12 @@ public class Vehicle {
         return owner;
     }
 
-    public void setOwner(String owner) {
-
-        this.owner = owner;
+    public void setOwner(String name, String address, String email, long phoneNumber, Gender gender) {
+        this.owner.setName(name);
+        this.owner.setAddress(address);
+        this.owner.setEmail(email);
+        this.owner.setPhone(phoneNumber);
+        this.owner.setGender(gender.toString());
     }
 
     public String getModel() {
