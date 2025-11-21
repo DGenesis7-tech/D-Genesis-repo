@@ -19,7 +19,7 @@ public class vehiclesRepositoryTest {
     @BeforeEach
     void setUp() {
         vehiclesRepo = new Vehicles();
-        vehicle = new Vehicle("Toyota", "Camry", Year.of(2020), "PN1000A", new Owner("Daniel", "VI", "DD@gmail.com", 7031032739L, Gender.MALE));
+        vehicle = new Vehicle("Toyota", "Camry", Year.of(2020), "PN1000A", , new Owner("Daniel", "VI", "DD@gmail.com", 7031032739L, Gender.MALE));
     }
 
     @AfterEach
@@ -37,7 +37,7 @@ public class vehiclesRepositoryTest {
     @Test
     public void testToPreventDuplicateVehicle() {
         vehiclesRepo.save(vehicle);
-        Vehicle copy = new Vehicle("Toyota", "Camry", Year.of(2020), "PN1000A", new Owner("Daniel", "VI", "DD@gmail.com", 7031032739L, Gender.MALE));
+        Vehicle copy = new Vehicle("Toyota", "Camry", Year.of(2020), "PN1000A", , new Owner("Daniel", "VI", "DD@gmail.com", 7031032739L, Gender.MALE));
         vehiclesRepo.save(copy);
         assertEquals(1, vehiclesRepo.count());
     }

@@ -1,37 +1,33 @@
 package data.models;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.reverse;
-
 public enum Offence {
     DRUNK_DRIVING("Driving under influence", 50000),
-
     UNDER_AGED("Not up to 18!!", 50000),
-
     SEAT_BELTS("No Seatbelts", 50000),
-
     FAKE_ID("Invalid ID", 50000);
 
+    private final String description;
+    private final int price;
+
     Offence(String description, int price) {
-        describe(description);
+        this.description = description;
+        this.price = price;
     }
 
-    void describe(String descriptionAKA) {
-        for (Offence offence : Offence.values()) {
-            if (offence.toString().equals(descriptionAKA)) {
-                System.out.println(offence);
-            }
-        }
+    public String getDescription() {
+        return description;
     }
 
-    int price(String descriptionAKA) {
+    public int getPrice() {
+        return price;
+    }
+
+    public static Offence fromDescription(String description) {
         for (Offence offence : Offence.values()) {
-            if (offence.toString().equals(descriptionAKA)) {
-                return parseInt(offence.toString());
+            if (offence.description.equalsIgnoreCase(description)) {
+                return offence;
             }
         }
-
-        return 4000;
+        return null;
     }
 }
-

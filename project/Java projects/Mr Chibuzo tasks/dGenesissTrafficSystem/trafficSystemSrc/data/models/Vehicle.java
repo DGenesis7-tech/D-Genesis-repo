@@ -11,18 +11,27 @@ public class Vehicle {
     String plateNumber;
     Owner owner;
     List<Ticket> tickets;
+    String vehicleId;
 
-    public Vehicle(String name, String model, Year year, String plateNumber, Owner owner) {
+    public Vehicle(String name, String model, Year year, String plateNumber, String vehicleId, Owner owner) {
         this.name = name;
         this.model = model;
         this.year = year;
         this.plateNumber = plateNumber;
         this.owner = owner;
         this.tickets = new ArrayList<>();
+        this.vehicleId = vehicleId;
     }
 
     public Vehicle() {
+        this.tickets = new ArrayList<>();
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{name='" + name + "', model='" + model + "', plate='" + plateNumber + "', year=" + year + ", owner=" + owner.getName() + "}";
+    }
+
 
 
     public String getName() {
@@ -38,12 +47,14 @@ public class Vehicle {
     }
 
     public void setOwner(String name, String address, String email, long phoneNumber, Gender gender) {
-        this.owner.setName(name);
-        this.owner.setAddress(address);
-        this.owner.setEmail(email);
-        this.owner.setPhone(phoneNumber);
-        this.owner.setGender(gender.toString());
+        if (owner == null) owner = new Owner();
+        owner.setName(name);
+        owner.setAddress(address);
+        owner.setEmail(email);
+        owner.setPhone(phoneNumber);
+        owner.setGender(gender.toString());
     }
+
 
     public String getModel() {
         return this.model;
@@ -67,5 +78,12 @@ public class Vehicle {
 
     public void setPlateNumber(String plateNumber) {
         this.plateNumber = plateNumber;
+    }
+
+    public void setId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+    public String getId() {
+        return vehicleId;
     }
 }

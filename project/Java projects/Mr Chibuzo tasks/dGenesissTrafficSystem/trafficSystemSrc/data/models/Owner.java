@@ -27,6 +27,11 @@ public class Owner {
         this.email = mail;
     }
 
+    @Override
+    public String toString() {
+        return "Owner{name='" + name + "', address='" + address + "', email='" + email + "'}";
+    }
+
 
     public String getName() {
         return name;
@@ -49,15 +54,13 @@ public class Owner {
     }
 
     public void setGender(String gender) {
-       if (gender.equals("Male")) {
-           this.gender = Gender.MALE;
-       }
-       else if (gender.equals("Female")) {
-           this.gender = Gender.FEMALE;
-       }
-       else {
-           this.gender = Gender.CURSED;
-       }
+        if (gender.equalsIgnoreCase("Male")) {
+            this.gender = Gender.MALE;
+        } else if (gender.equalsIgnoreCase("Female")) {
+            this.gender = Gender.FEMALE;
+        } else {
+            this.gender = Gender.CURSED;
+        }
     }
 
     public long getPhone() {
@@ -65,16 +68,12 @@ public class Owner {
     }
 
     public void setPhone(long phone) {
-        boolean isNum = false;
-        if ((phone <= 999999999L) || (phone > 9999999999L)) {
+        if (phone <= 999999999L || phone > 9999999999L) {
             System.out.println("INVALID PHONE NUMBER, INVALID RANGE");
-        }
-        else {
+        } else {
             this.phone = phone;
             System.out.println("Created successfully!");
         }
-
-
     }
 
     public String getEmail() {

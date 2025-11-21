@@ -2,62 +2,46 @@ package data.repositories;
 
 import data.models.Gender;
 import data.models.Owner;
+import java.util.List;
 
-import java.util.ArrayList;
-
-public class Owners implements OwnerRepository {
-    private ArrayList<Owner> owners = new ArrayList<>();
+public class Owners extends GenericTypesRepository<Owner> implements OwnerRepository {
 
     @Override
-    public Owner findById(String id) {
-        for (Owner owner : owners) {
-            if (owner.getId().equalsIgnoreCase(id)) {
-                return owner;
-            }
+    public Owner findById(int id) {
+        for (Owner owner : findAll()) {
+            if (owner.getId().equals(String.valueOf(id))) return owner;
         }
         return null;
     }
 
     @Override
-    public ArrayList<Owner> findAll() {
-        return new ArrayList<>(owners);
+    public Owner findById(String id) {
+        for (Owner owner : findAll()) {
+            if (owner.getId().equals(id)) return owner;
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteById(int id) {
+        Owner owner = findById(id);
+        if (owner != null) delete(owner);
     }
 
     @Override
     public void deleteById(String id) {
-        for (Owner owner : owners) {
-            if (owner.getId().equalsIgnoreCase(id)) {
-                owners.remove(owner);
-                break;
-            }
-        }
-
-    }
-
-    @Override
-    public void delete(Owners owner) {
-       owners.remove(owner);
-    }
-
-    @Override
-    public void deleteAll() {
-        owners.clear();
-
-    }
-
-    @Override
-    public long count() {
-        return owners.size();
+        Owner owner = findById(id);
+        if (owner != null) delete(owner);
     }
 
     @Override
     public void updateOwner(Owner owner, String newOwnerName, String newAddress, String newEmail, long newPhoneNumber, Gender newGender) {
-        if (owner != null && owners.contains(owner)) {
+        if (findAll().contains(owner)) {
             owner.setName(newOwnerName);
             owner.setAddress(newAddress);
             owner.setEmail(newEmail);
             owner.setPhone(newPhoneNumber);
-            owner.setGender(String.valueOf(newGender));
+            owner.setGender(newGender.toString());
         }
     }
 }

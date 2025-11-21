@@ -1,19 +1,23 @@
-package data.models;
+package dtos.responses;
+
+import data.models.Offence;
+import data.models.Vehicle;
+import data.models.Officer;
 
 import java.time.LocalDateTime;
 
-public class Ticket {
-    private int id;
+public class ViewTicketResponse {
+    private int ticketId;
     private Vehicle vehicle;
     private Offence offence;
     private Officer issuer;
     private LocalDateTime dateOfBooking;
     private boolean hasPaid;
 
-    public Ticket() {}
+    public ViewTicketResponse() {}
 
-    public Ticket(int id, Vehicle vehicle, Offence offence, Officer issuer, LocalDateTime dateOfBooking, boolean hasPaid) {
-        this.id = id;
+    public ViewTicketResponse(int ticketId, Vehicle vehicle, Offence offence, Officer issuer, LocalDateTime dateOfBooking, boolean hasPaid) {
+        this.ticketId = ticketId;
         this.vehicle = vehicle;
         this.offence = offence;
         this.issuer = issuer;
@@ -21,12 +25,12 @@ public class Ticket {
         this.hasPaid = hasPaid;
     }
 
-    public int getId() {
-        return id;
+    public int getTicketId() {
+        return ticketId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
     }
 
     public Vehicle getVehicle() {
@@ -65,17 +69,7 @@ public class Ticket {
         return hasPaid;
     }
 
-    public void setHasPaid(int amount, Offence offence) {
+    public void setHasPaid(boolean hasPaid) {
         this.hasPaid = hasPaid;
-    }
-
-    @Override
-    public String toString() {
-        return "Ticket ID: " + id +
-                ", Vehicle: " + (vehicle != null ? vehicle.getPlateNumber() : "N/A") +
-                ", Offence: " + (offence != null ? offence.getDescription() : "N/A") +
-                ", Issuer: " + (issuer != null ? issuer.getName() : "N/A") +
-                ", Date of Booking: " + (dateOfBooking != null ? dateOfBooking : "N/A") +
-                ", Paid: " + hasPaid;
     }
 }
