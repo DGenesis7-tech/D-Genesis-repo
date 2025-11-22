@@ -49,14 +49,7 @@ public class Mapper {
     }
 
     public static VehicleResponse mapVehicleToResponse(Vehicle vehicle) {
-        return new VehicleResponse(
-                vehicle.getName(),
-                vehicle.getModel(),
-                vehicle.getYear(),
-                vehicle.getPlateNumber(),
-                vehicle.getOwner().getName(),
-                vehicle.getOwner().getGender()
-        );
+        return new VehicleResponse(vehicle.getName(), vehicle.getModel(), vehicle.getYear(), vehicle.getPlateNumber(), vehicle.getOwner());
     }
 
     public static List<VehicleResponse> mapVehicleListToResponseList(List<Vehicle> vehicles) {
@@ -67,17 +60,12 @@ public class Mapper {
         return responses;
     }
 
-    public static void updateVehicleFromRequest(Vehicle vehicle, VehicleRequest request) {
+    public static void updateVehicleFromRequest(VehicleResponse vehicle, VehicleRequest request) {
         vehicle.setName(request.getName());
         vehicle.setModel(request.getModel());
         vehicle.setYear(request.getYear());
         vehicle.setPlateNumber(request.getPlateNumber());
-        vehicle.setOwner(
-                request.getOwnerName(),
-                request.getOwnerAddress(),
-                request.getOwnerEmail(),
-                request.getOwnerPhone(),
-                request.getOwnerGender()
+        vehicle.setOwner(request.getOwnerName(), request.getOwnerAddress(), request.getOwnerEmail(), request.getOwnerPhone(), request.getOwnerGender()
         );
     }
 

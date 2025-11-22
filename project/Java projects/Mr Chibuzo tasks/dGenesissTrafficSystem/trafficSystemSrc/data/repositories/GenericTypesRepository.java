@@ -1,37 +1,34 @@
 package data.repositories;
 
-import data.models.Officer;
-
 import java.util.ArrayList;
 import java.util.List;
 
 // O == Object Type
 public class GenericTypesRepository<O> {
-    private List<O> items = new ArrayList<>();
+    private final List<O> objects = new ArrayList<>();
 
-    public Officer save(O item) {
-        items.add(item);
-        return null;
+    public void save(O item) {
+        objects.add(item);
     }
 
     public List<O> findAll() {
-        return new ArrayList<>(items);
+        return objects;
     }
 
     public void delete(O item) {
-        items.remove(item);
+        objects.remove(item);
     }
 
     public void deleteAll() {
-        items.clear();
+        objects.clear();
     }
 
     public long count() {
-        return items.size();
+        return objects.size();
     }
 
     public O findByIndex(int index) {
-        if (index < 0 || index >= items.size()) return null;
-        return items.get(index);
+        if (index < 0 || index >= objects.size()) return null;
+        return objects.get(index);
     }
 }

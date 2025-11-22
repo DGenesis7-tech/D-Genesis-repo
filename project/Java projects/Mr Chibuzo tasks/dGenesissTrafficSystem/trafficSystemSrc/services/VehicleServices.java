@@ -8,6 +8,11 @@ import java.util.List;
 
 public interface VehicleServices {
     VehicleResponse createVehicle(VehicleRequest request);
-    void updateVehicle(Vehicle vehicle, VehicleRequest request);
+    void updateVehicle(VehicleResponse vehicle, VehicleRequest request);
     List<VehicleResponse> getAllVehicles();
+    List<Vehicle> getAllVehiclesObject();
+
+    List<Vehicle> getAllVehiclesDomain();
+
+    void updateVehicle(Vehicle foundVehicle, VehicleRequest request);
 }

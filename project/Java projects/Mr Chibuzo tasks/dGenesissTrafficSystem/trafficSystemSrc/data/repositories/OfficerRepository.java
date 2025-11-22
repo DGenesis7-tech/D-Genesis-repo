@@ -12,5 +12,5 @@ public interface OfficerRepository {
     void deleteAll();
     long count();
     void updateOfficer(Officer officer, String newName, Rank newRank);
-    Officer save(Officer officer);
+    void save(Officer officer);
 }

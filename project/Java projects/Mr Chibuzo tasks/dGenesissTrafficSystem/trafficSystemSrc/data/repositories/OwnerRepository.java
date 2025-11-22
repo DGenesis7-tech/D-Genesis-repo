@@ -1,6 +1,5 @@
 package data.repositories;
 
-import data.models.Officer;
 import data.models.Owner;
 import data.models.Gender;
 import java.util.List;
@@ -15,5 +14,5 @@ public interface OwnerRepository {
     void deleteAll();
     long count();
     void updateOwner(Owner owner, String newOwnerName, String newAddress, String newEmail, long newPhoneNumber, Gender newGender);
-    Officer save(Owner owner);
+    void save(Owner owner);
 }

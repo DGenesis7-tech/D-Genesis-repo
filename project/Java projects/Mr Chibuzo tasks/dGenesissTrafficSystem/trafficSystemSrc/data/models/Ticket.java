@@ -9,16 +9,18 @@ public class Ticket {
     private Officer issuer;
     private LocalDateTime dateOfBooking;
     private boolean hasPaid;
+    private LocalDateTime dateOfPayment;
 
     public Ticket() {}
 
-    public Ticket(int id, Vehicle vehicle, Offence offence, Officer issuer, LocalDateTime dateOfBooking, boolean hasPaid) {
+    public Ticket(int id, Vehicle vehicle, Offence offence, Officer issuer, LocalDateTime dateOfBooking, boolean hasPaid, LocalDateTime dateOfPayment) {
         this.id = id;
         this.vehicle = vehicle;
         this.offence = offence;
         this.issuer = issuer;
         this.dateOfBooking = dateOfBooking;
         this.hasPaid = hasPaid;
+        this.dateOfPayment = dateOfPayment;
     }
 
     public int getId() {
@@ -60,6 +62,16 @@ public class Ticket {
     public void setDateOfBooking(LocalDateTime dateOfBooking) {
         this.dateOfBooking = dateOfBooking;
     }
+
+
+    public void setDateOfPayment(LocalDateTime dateOfPayment) {
+        this.dateOfPayment = dateOfPayment;
+    }
+
+    public LocalDateTime getDateOfPayment() {
+        return dateOfPayment;
+    }
+
 
     public boolean isHasPaid() {
         return hasPaid;

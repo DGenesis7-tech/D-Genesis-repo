@@ -7,6 +7,8 @@ public class OfficerResponse {
     private String name;
     private Rank rank;
 
+    public OfficerResponse() {}
+
     public OfficerResponse(int id, String name, Rank rank) {
         this.id = id;
         this.name = name;
@@ -23,6 +25,6 @@ public class OfficerResponse {
 
     @Override
     public String toString() {
-        return "Officer {ID=" + id + ", Name='" + name + "', Rank=" + rank + "}";
+        return "Officer ID: " + id + ", Name: " + name + ", Rank: " + rank;
     }
 }

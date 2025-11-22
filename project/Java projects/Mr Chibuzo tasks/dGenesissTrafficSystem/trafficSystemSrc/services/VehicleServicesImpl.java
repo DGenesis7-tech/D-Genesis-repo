@@ -29,7 +29,7 @@ public class VehicleServicesImpl implements VehicleServices {
     }
 
     @Override
-    public void updateVehicle(Vehicle vehicle, VehicleRequest request) {
+    public void updateVehicle(VehicleResponse vehicle, VehicleRequest request) {
         Mapper.updateVehicleFromRequest(vehicle, request);
     }
 
@@ -37,4 +37,20 @@ public class VehicleServicesImpl implements VehicleServices {
     public List<VehicleResponse> getAllVehicles() {
         return Mapper.mapVehicleListToResponseList(vehicleRepo.findAll());
     }
+
+    @Override
+    public List<Vehicle> getAllVehiclesObject() {
+        return vehicleRepo.findAll();
+    }
+
+    @Override
+    public List<Vehicle> getAllVehiclesDomain() {
+        return List.of();
+    }
+
+    @Override
+    public void updateVehicle(Vehicle foundVehicle, VehicleRequest request) {
+
+    }
+
 }
