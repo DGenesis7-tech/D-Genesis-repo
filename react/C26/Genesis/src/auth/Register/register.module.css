@@ -1,0 +1,79 @@
+/* .welcome{
+    text-align: center;
+    animation: changeColor 5s infinite;
+    }
+
+    @keyframes changeColor {
+        0% {
+            color: red;
+        }
+        25% {
+            color: blue;
+        }
+        50% {
+            color: green;
+        }
+        75% {
+            color: orange;
+        }
+
+        85% {
+            color: purple;
+        }
+        100% {
+            color: red;
+        }
+
+} */
+
+.input{
+    width: 100%;
+    outline: 2px solid teal;
+}
+
+.labelInput{
+    border: 2px solid rgb(208, 254, 0);
+    box-shadow: 0 0 8px teal;
+    display: flex;
+    flex-direction: horizontal;
+    gap: 1px;
+}
+/* .instruction{
+    width: 70%;
+    padding: 4px 12px;
+    animation: moveButton 5s linear infinite;
+} */
+
+/* @keyframes moveButton {
+    20% {
+        transform: translateX(200px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+
+} */
+
+.registerForm{
+width: 500px;
+margin: auto;
+}
+
+.link{
+    color: blue;
+    text-decoration: red underline;
+    margin-top: 40px;
+    display: inline-block;
+    
+}
+/* 
+img{
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+} */

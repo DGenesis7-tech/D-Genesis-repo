@@ -1,0 +1,14 @@
+.input{
+    width: 400px;
+    outline: none;
+}
+
+.labelInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.Login{
+    width: 500px;
+    margin: auto;
+}

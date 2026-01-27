@@ -1,0 +1,5 @@
+{
+  "db_username": "root",
+  "db_password": "Blessingokp080",
+  "db_url": "jdbc:mysql://localhost:3306/account_manager_db"
+}

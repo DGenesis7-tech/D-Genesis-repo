@@ -10,8 +10,8 @@ import data.repositories.Tickets;
 import data.repositories.Vehicles;
 import services.*;
 
+import javax.swing.*;
 import java.time.Year;
-import java.util.Scanner;
 
 public class Main {
     private static final Officers officerRepo = new Officers();
@@ -21,8 +21,6 @@ public class Main {
     private static final OfficerServices officerServices = new OfficerServicesImpl(officerRepo);
     private static final VehicleServices vehicleServices = new VehicleServicesImpl(vehicleRepo);
     private static final TicketService ticketService = new TicketServicesImpl();
-
-    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
@@ -39,62 +37,70 @@ public class Main {
                     0 -> Exit
                     """;
 
-            System.out.println(menu);
-            System.out.print("Choose an option: ");
-            String input = scanner.nextLine();
+            String input = JOptionPane.showInputDialog(menu);
+
+            if (input == null) System.exit(0);
 
             switch (input) {
-                case "1" : registerOfficer();
-                case "2" : registerVehicle();
-                case "3" : viewOfficers();
-                case "4" : viewVehicles();
-                case "5" : updateOfficer();
-                case "6" : updateVehicle();
-                case "7" : issueTicket();
-                case "8" : viewTickets();
-                case "0" : {
-                    System.out.println("Exiting... Goodbye!");
-                    System.exit(0);
-                }
-                default : System.out.println("Invalid Option. Try again.");
+                case "1" -> registerOfficer();
+                case "2" -> registerVehicle();
+                case "3" -> viewAllOfficers();
+                case "4" -> viewAllVehicles();
+                case "5" -> updateOfficer();
+                case "6" -> updateVehicle();
+                case "7" -> issueTicket();
+                case "8" -> viewTickets();
+                case "0" -> System.exit(0);
+                default -> JOptionPane.showMessageDialog(null, "Invalid Option");
             }
         }
     }
 
     private static void registerOfficer() {
-        System.out.print("Officer name: ");
-        String name = scanner.nextLine();
-        System.out.print("Officer rank (PRIVATE, CONSTABLE, WARDEN, INSPECTOR, SUPERINTENDENT): ");
-        Rank rank = Rank.valueOf(scanner.nextLine().toUpperCase());
-
+        String name = JOptionPane.showInputDialog("Officer name:");
+        String ranked = JOptionPane.showInputDialog("Rank:").toUpperCase();
+        Rank rank = Rank.valueOf(ranked);
         OfficerRequest request = new OfficerRequest(name, rank);
         OfficerResponse response = officerServices.createOfficer(request);
-        System.out.println("Added Officer: " + response);
+        JOptionPane.showMessageDialog(null, response.toString());
+    }
+
+    private static void updateOfficer() {
+        String id = JOptionPane.showInputDialog("Enter Officer ID:");
+        Officer officer = officerServices.findOfficerById(id);
+        if (officer == null) {
+            JOptionPane.showMessageDialog(null, "Officer not found.");
+            return;
+        }
+
+        String name = JOptionPane.showInputDialog("New name:");
+        Rank rank = Rank.valueOf(JOptionPane.showInputDialog("New rank:").toUpperCase());
+
+        OfficerRequest request = new OfficerRequest(name, rank);
+        officerServices.updateOfficer(id, request);
+        JOptionPane.showMessageDialog(null, "Officer updated.");
+    }
+
+    private static void viewAllOfficers() {
+        StringBuilder builder = new StringBuilder();
+        for (OfficerResponse o : officerServices.getAllOfficers()) {
+            builder.append(o).append("\n");
+        }
+        JOptionPane.showMessageDialog(null, builder.toString());
     }
 
     private static void registerVehicle() {
-        System.out.print("Vehicle name: ");
-        String name = scanner.nextLine();
-        System.out.print("Vehicle model: ");
-        String model = scanner.nextLine();
-        System.out.print("Plate number: ");
-        String plateNum = scanner.nextLine();
-        System.out.print("Year: ");
-        int yearInput = Integer.parseInt(scanner.nextLine());
-
-        System.out.print("Register Owner: ");
-        String ownerName = scanner.nextLine();
-        System.out.print("Register Owner's Address: ");
-        String ownerAddress = scanner.nextLine();
-        System.out.print("Register Owner's Email: ");
-        String ownerEmail = scanner.nextLine();
-        System.out.print("Register Owner's PhoneNum: ");
-        long ownerPhone =  Long.parseLong(scanner.nextLine());
-        System.out.print("Register Owner's Gender: ");
-        Gender ownerGender = Gender.valueOf(scanner.nextLine().toUpperCase());
+        String name = JOptionPane.showInputDialog("Vehicle name:");
+        String model = JOptionPane.showInputDialog("Vehicle model:");
+        String plateNum = JOptionPane.showInputDialog("Plate number:");
+        int yearInput = Integer.parseInt(JOptionPane.showInputDialog("Year:"));
+        String ownerName = JOptionPane.showInputDialog("Owner name:");
+        String ownerAddress = JOptionPane.showInputDialog("Owner address:");
+        String ownerEmail = JOptionPane.showInputDialog("Owner email:");
+        long ownerPhone = Long.parseLong(JOptionPane.showInputDialog("Owner phone:"));
+        Gender ownerGender = Gender.valueOf(JOptionPane.showInputDialog("Owner gender:").toUpperCase());
 
         VehicleRequest request = new VehicleRequest();
-
         request.setName(name);
         request.setModel(model);
         request.setPlateNumber(plateNum);
@@ -106,104 +112,59 @@ public class Main {
         request.setOwnerGender(ownerGender);
 
         VehicleResponse response = vehicleServices.createVehicle(request);
-        System.out.println("Vehicle Registered : " + response);
+        JOptionPane.showMessageDialog(null, response.toString());
     }
 
-    private static void viewOfficers() {
-        for (OfficerResponse officer : officerServices.getAllOfficers()) {
-            System.out.println(officer);
+    private static void viewAllVehicles() {
+        StringBuilder builder = new StringBuilder();
+        for (VehicleResponse v : vehicleServices.getAllVehicles()) {
+            builder.append(v).append("\n");
         }
-    }
-
-    private static void viewVehicles() {
-        for (VehicleResponse vehicle : vehicleServices.getAllVehicles()) {
-            System.out.println(vehicle);
-        }
-    }
-
-    private static void updateOfficer() {
-        System.out.print("Officer ID: ");
-        int id = Integer.parseInt(scanner.nextLine());
-        Officer officer = officerServices.findOfficerById(id);
-        if (officer == null) {
-            System.out.println("Officer not found.");
-            return;
-        }
-
-        System.out.print("New name: ");
-        String name = scanner.nextLine();
-        System.out.print("New rank: ");
-        Rank rank = Rank.valueOf(scanner.nextLine().toUpperCase());
-
-        OfficerRequest request = new OfficerRequest(name, rank);
-        officerServices.updateOfficer(officer, request);
-        System.out.println("Officer updated successfully.");
+        JOptionPane.showMessageDialog(null, builder.toString());
     }
 
     private static void updateVehicle() {
-        System.out.print("Vehicle plate number: ");
-        String plate = scanner.nextLine();
-
-        VehicleResponse foundVehicleResponse = null;
-        for (VehicleResponse v : vehicleServices.getAllVehicles()) {
-            if (v.getPlateNumber().equals(plate)) {
-                foundVehicleResponse = v;
-                break;
-            }
-        }
-
-        if (foundVehicleResponse == null) {
-            System.out.println("Vehicle not found.");
-            return;
-        }
-
+        String plate = JOptionPane.showInputDialog("Plate number:");
         Vehicle foundVehicle = vehicleRepo.findByPlateNumber(plate);
         if (foundVehicle == null) {
-            System.out.println("Vehicle not found in repository.");
+            JOptionPane.showMessageDialog(null, "Vehicle not found.");
             return;
         }
 
-        System.out.print("New name: ");
-        String name = scanner.nextLine();
-        System.out.print("New model: ");
-        String model = scanner.nextLine();
+        String name = JOptionPane.showInputDialog("New name:");
+        String model = JOptionPane.showInputDialog("New model:");
 
         VehicleRequest request = new VehicleRequest();
         request.setName(name);
         request.setModel(model);
 
         vehicleServices.updateVehicle(foundVehicle, request);
-        System.out.println("Vehicle updated successfully.");
+        JOptionPane.showMessageDialog(null, "Vehicle updated.");
     }
 
-
-
     private static void issueTicket() {
-        System.out.print("Ticket ID: ");
-        int ticketId = Integer.parseInt(scanner.nextLine());
-        System.out.print("Vehicle plate number: ");
-        String plate = scanner.nextLine();
-        System.out.print("Officer ID: ");
-        int officerId = Integer.parseInt(scanner.nextLine());
-        System.out.print("Offence description: ");
-        String offenceDescription = scanner.nextLine();
-        System.out.print("Payment amount: ");
-        int payment = Integer.parseInt(scanner.nextLine());
+        int ticketId = Integer.parseInt(JOptionPane.showInputDialog("Ticket ID:"));
+        String plate = JOptionPane.showInputDialog("Vehicle plate:");
+        String officerId = JOptionPane.showInputDialog("Officer ID:");
+        String offence = JOptionPane.showInputDialog("Offence:");
+        int payment = Integer.parseInt(JOptionPane.showInputDialog("Payment:"));
 
         IssueTicketRequest request = new IssueTicketRequest();
         request.setTicketId(ticketId);
         request.setVehicleId(plate);
         request.setOfficerId(officerId);
-        request.setOffenceDescription(offenceDescription);
+        request.setOffenceDescription(offence);
         request.setPayment(payment);
 
         IssueTicketResponse response = ticketService.issue(request);
-        System.out.println(response.getMessage());
+        JOptionPane.showMessageDialog(null, response.getMessage());
     }
 
     private static void viewTickets() {
-        for (Ticket ticket : ticketRepo.findAll()) {
-            System.out.println(ticket);
+        StringBuilder builder = new StringBuilder();
+        for (Ticket t : ticketRepo.findAll()) {
+            builder.append(t).append("\n");
         }
+        JOptionPane.showMessageDialog(null, builder.toString());
     }
 }
