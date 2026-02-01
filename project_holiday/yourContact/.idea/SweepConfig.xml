@@ -13,5 +13,6 @@
     </option>
     <option name="gateStringReplaceInChat" value="true" />
     <option name="showAutocompleteBadge" value="true" />
+    <option name="showTokenDetails" value="false" />
   </component>
 </project>

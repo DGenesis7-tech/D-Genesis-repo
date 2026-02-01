@@ -17,7 +17,12 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     public User findById(int id) {
-        return users.stream().filter(u -> u.getId() == id).findFirst().orElse(null);
+        for (User user : users) {
+            if (user.getId() == id) {
+                return user;
+            }
+        }
+        return null;
     }
 
     public User findByUsername(String username) {

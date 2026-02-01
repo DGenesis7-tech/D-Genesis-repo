@@ -1,7 +1,6 @@
 package org.example.data.models;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class ContactList {
@@ -13,10 +12,17 @@ public class ContactList {
         this.trash = new ArrayList<>();
     }
 
-    public List<Contact> getContacts() { return contacts; }
-    public List<Contact> getTrash() { return trash; }
+    public List<Contact> getContacts() {
+        return contacts;
+    }
 
-    public void addContact(Contact contact) { contacts.add(contact); }
+    public List<Contact> getTrash() {
+        return trash;
+    }
+
+    public void addContact(Contact contact) {
+        contacts.add(contact);
+    }
 
     public void removeContact(Contact contact) {
         contacts.remove(contact);
@@ -29,22 +35,64 @@ public class ContactList {
     }
 
     public Contact findById(int contactId) {
-        return contacts.stream().filter(c -> c.getId() == contactId).findFirst().orElse(null);
+        for (Contact contact : contacts) {
+            if (contact.getId() == contactId) {
+                return contact;
+            }
+        }
+        return null;
     }
 
-    public void updateContact(Contact contact) {
-        for (int i = 0; i < contacts.size(); i++) {
-            if (contacts.get(i).getId() == contact.getId()) {
-                contacts.set(i, contact);
+    public void sortAlphabetically() {
+        for (int index = 0; index < contacts.size() - 1; index++) {
+            for (int index2 = 0; index2 < contacts.size() - index - 1; index2++) {
+                Contact currentContact = contacts.get(index2);
+                Contact nextContact = contacts.get(index2 + 1);
+                if (isGreaterThan(currentContact.getName(), nextContact.getName())) {
+                    contacts.set(index2, nextContact);
+                    contacts.set(index2 + 1, currentContact);
+                }
             }
         }
     }
 
-    public void sortAlphabetically() {
-        contacts.sort(Comparator.comparing(Contact::getName));
+    private boolean isGreaterThan(String name1, String name2) {
+        String lowerName1 = name1.toLowerCase();
+        String lowerName2 = name2.toLowerCase();
+        int length1 = lowerName1.length();
+        int length2 = lowerName2.length();
+        int smallerLength = length1;
+        if (length2 < length1) {
+            smallerLength = length2;
+        }
+
+        for (int index = 0; index < smallerLength; index++) {
+            char char1 = lowerName1.charAt(index);
+            char char2 = lowerName2.charAt(index);
+            if (char1 > char2) {
+                return true;
+            } else if (char1 < char2) {
+                return false;
+            }
+        }
+
+        if (length1 > length2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void sortByLastAdded() {
-        contacts.sort(Comparator.comparing(Contact::getId));
+        for (int index = 0; index < contacts.size() - 1; index++) {
+            for (int index1 = 0; index1 < contacts.size() - index - 1; index1++) {
+                Contact currentContact = contacts.get(index1);
+                Contact nextContact = contacts.get(index1 + 1);
+                if (currentContact.getId() > nextContact.getId()) {
+                    contacts.set(index1, nextContact);
+                    contacts.set(index1 + 1, currentContact);
+                }
+            }
+        }
     }
 }

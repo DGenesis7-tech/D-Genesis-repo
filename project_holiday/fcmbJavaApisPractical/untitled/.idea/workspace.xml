@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6485d11b-3379-42d4-a8db-bd9b4edf1844" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/run-windows.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/run-windows.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/main/YourContactApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/.idea/SweepConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/.idea/SweepConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/models/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/models/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/services/UserServiceJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/services/UserServiceJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/ValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/ValidationUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/fcmbJavaApisPractical/untitled" value="38yLijMPjYrBk8zdb1vHjBKrasw" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="38yLijMPjYrBk8zdb1vHjBKrasw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "holiday",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6485d11b-3379-42d4-a8db-bd9b4edf1844" name="Changes" comment="" />
+      <created>1769766993202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769766993202</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

@@ -6,6 +6,9 @@ public class ContactResponse {
     private String phoneNumber;
     private String email;
 
+    public ContactResponse() {
+    }
+
     public ContactResponse(int id, String name, String phoneNumber, String email) {
         this.id = id;
         this.name = name;

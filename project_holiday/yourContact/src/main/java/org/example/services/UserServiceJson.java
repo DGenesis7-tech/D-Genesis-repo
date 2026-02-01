@@ -77,15 +77,29 @@ public class UserServiceJson {
             throw new IllegalArgumentException("Invalid email format");
         }
 
-        int newId = user.getContactList().getContacts().size() +
-                user.getContactList().getTrash().size() + 1;
-        Contact contact = new Contact(newId, request.getName(), request.getPhoneNumber(), request.getEmail());
-        user.getContactList().addContact(contact);
+        // Generate unique ID by finding the maximum existing ID and adding 1
+        int maximumContactId = 0;
+        for (Contact contact : user.getContactList().getContacts()) {
+            if (contact.getId() > maximumContactId) {
+                maximumContactId = contact.getId();
+            }
+        }
+        for (Contact trashedContact : user.getContactList().getTrash()) {
+            if (trashedContact.getId() > maximumContactId) {
+                maximumContactId = trashedContact.getId();
+            }
+        }
+        int newContactId = maximumContactId + 1;
+
+        Contact newContact = new Contact(newContactId, request.getName(), request.getPhoneNumber(), request.getEmail());
+        user.getContactList().addContact(newContact);
     }
 
     public void updateContact(User user, UpdateContactRequest request) {
-        Contact existing = user.getContactList().findById(request.getContactId());
-        if (existing == null) throw new ContactNotFoundException("Contact not found");
+        Contact existingContact = user.getContactList().findById(request.getContactId());
+        if (existingContact == null) {
+            throw new ContactNotFoundException("Contact not found");
+        }
 
         // Validate updated contact inputs
         if (request.getName() == null || request.getName().trim().isEmpty()) {
@@ -102,37 +116,60 @@ public class UserServiceJson {
             throw new IllegalArgumentException("Invalid email format");
         }
 
-        existing.setName(request.getName());
-        existing.setPhoneNumber(request.getPhoneNumber());
-        existing.setEmail(request.getEmail());
+        existingContact.setName(request.getName());
+        existingContact.setPhoneNumber(request.getPhoneNumber());
+        existingContact.setEmail(request.getEmail());
     }
 
     public void deleteContact(User user, int contactId) {
-        Contact existing = user.getContactList().findById(contactId);
-        if (existing == null) throw new ContactNotFoundException("Contact not found");
-        user.getContactList().removeContact(existing);
+        Contact existingContact = user.getContactList().findById(contactId);
+        if (existingContact == null) {
+            throw new ContactNotFoundException("Contact not found");
+        }
+        user.getContactList().removeContact(existingContact);
     }
 
     public void restoreContact(User user, int contactId) {
-        Contact inTrash = user.getContactList().getTrash().stream()
-                .filter(c -> c.getId() == contactId).findFirst().orElse(null);
-        if (inTrash != null) user.getContactList().restoreFromTrash(inTrash);
+        Contact contactInTrash = null;
+        for (Contact trashedContact : user.getContactList().getTrash()) {
+            if (trashedContact.getId() == contactId) {
+                contactInTrash = trashedContact;
+                break;
+            }
+        }
+        if (contactInTrash == null) {
+            throw new ContactNotFoundException("Contact not found in trash");
+        }
+        user.getContactList().restoreFromTrash(contactInTrash);
     }
 
-    public void sortAlphabetically(User user) { user.getContactList().sortAlphabetically(); }
-    public void sortByLastAdded(User user) { user.getContactList().sortByLastAdded(); }
+    public void sortAlphabetically(User user) {
+        user.getContactList().sortAlphabetically();
+    }
+
+    public void sortByLastAdded(User user) {
+        user.getContactList().sortByLastAdded();
+    }
 
     public ContactResponse[] viewContacts(User user) {
-        List<Contact> contacts = user.getContactList().getContacts();
-        return contacts.stream()
-                .map(c -> new ContactResponse(c.getId(), c.getName(), c.getPhoneNumber(), c.getEmail()))
-                .toArray(ContactResponse[]::new);
+        List<Contact> contactList = user.getContactList().getContacts();
+        ContactResponse[] contactResponses = new ContactResponse[contactList.size()];
+        for (int index = 0; index < contactList.size(); index++) {
+            Contact contact = contactList.get(index);
+            contactResponses[index] = new ContactResponse(contact.getId(), contact.getName(),
+                    contact.getPhoneNumber(), contact.getEmail());
+        }
+        return contactResponses;
     }
 
     public ContactResponse[] viewTrash(User user) {
-        List<Contact> trash = user.getContactList().getTrash();
-        return trash.stream()
-                .map(c -> new ContactResponse(c.getId(), c.getName(), c.getPhoneNumber(), c.getEmail()))
-                .toArray(ContactResponse[]::new);
+        List<Contact> trashList = user.getContactList().getTrash();
+        ContactResponse[] trashResponses = new ContactResponse[trashList.size()];
+        for (int index = 0; index < trashList.size(); index++) {
+            Contact trashedContact = trashList.get(index);
+            trashResponses[index] = new ContactResponse(trashedContact.getId(), trashedContact.getName(),
+                    trashedContact.getPhoneNumber(), trashedContact.getEmail());
+        }
+        return trashResponses;
     }
 }

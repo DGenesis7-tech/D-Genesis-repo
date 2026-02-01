@@ -2,13 +2,6 @@ package org.example.utils;
 
 public class ValidationUtils {
 
-    /**
-     * Custom implementation to remove leading and trailing whitespace from a string.
-     * This does the same thing as String.trim() but shows how it works under the hood.
-     *
-     * @param input the string to trim
-     * @return the trimmed string, or null if input is null
-     */
     public static String trimWhitespace(String input) {
         if (input == null || input.isEmpty()) {
             return input;
@@ -30,13 +23,19 @@ public class ValidationUtils {
 
         // Return substring without leading/trailing whitespace
         // If no whitespace was found, return original string
-        return (start > 0 || end < input.length())
-            ? input.substring(start, end)
-            : input;
+        if (start > 0 || end < input.length()) {
+            return input.substring(start, end);
+        } else {
+            return input;
+        }
     }
 
     public static boolean isValidPin(int pin) {
-        return pin >= 100000 && pin <= 999999;
+        if (pin >= 100000 && pin <= 999999) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static boolean isValidEmail(String email) {
@@ -44,17 +43,69 @@ public class ValidationUtils {
             return false;
         }
         // Simple email validation: contains @ and has text before and after it
-        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
-        return email.matches(emailRegex);
+        int atPosition = -1;
+        int dotPosition = -1;
+
+        // Find @ symbol
+        for (int index = 0; index < email.length(); index++) {
+            if (email.charAt(index) == '@') {
+                if (atPosition != -1) {
+                    return false; // Multiple @ symbols
+                }
+                atPosition = index;
+            }
+        }
+
+        // Check if @ exists and has text before it
+        if (atPosition <= 0) {
+            return false;
+        }
+
+        // Find last dot after @
+        for (int index = atPosition + 1; index < email.length(); index++) {
+            if (email.charAt(index) == '.') {
+                dotPosition = index;
+            }
+        }
+
+        // Check if dot exists after @ and has at least 2 characters after it
+        if (dotPosition <= atPosition + 1 || dotPosition >= email.length() - 2) {
+            return false;
+        }
+
+        return true;
     }
 
     public static boolean isValidPhoneNumber(String phoneNumber) {
         if (phoneNumber == null || trimWhitespace(phoneNumber).isEmpty()) {
             return false;
         }
-        // Remove common formatting characters
-        String cleaned = phoneNumber.replaceAll("[\\s()-]", "");
+
+        // Remove common formatting characters manually
+        String cleanedNumber = "";
+        for (int index = 0; index < phoneNumber.length(); index++) {
+            char currentChar = phoneNumber.charAt(index);
+            if (currentChar != ' ' && currentChar != '(' && currentChar != ')' && currentChar != '-') {
+                cleanedNumber = cleanedNumber + currentChar;
+            }
+        }
+
         // Check if it contains only digits and has reasonable length (7-15 digits)
-        return cleaned.matches("\\d{7,15}");
+        int digitCount = 0;
+        for (int index = 0; index < cleanedNumber.length(); index++) {
+            char currentChar = cleanedNumber.charAt(index);
+            if (currentChar >= '0' && currentChar <= '9') {
+                digitCount++;
+            } else {
+                return false; // Non-digit character found
+            }
+        }
+
+        // Check if digit count is within valid range
+        if (digitCount >= 7 && digitCount <= 15) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
