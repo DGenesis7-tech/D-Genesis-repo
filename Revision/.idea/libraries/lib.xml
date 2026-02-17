@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guice-4.1.0-no_aop.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/jcommander-1.72-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/javax.inject-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/testng-7.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/javax.inject-1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/snakeyaml-1.21-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/testng-7.1.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/testng-7.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guice-4.1.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/jcommander-1.72-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/snakeyaml-1.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/javax.inject-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guice-4.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/aopalliance-1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guava-19.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guava-19.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/jcommander-1.72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/snakeyaml-1.21-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Regex/lib/guava-19.0-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
