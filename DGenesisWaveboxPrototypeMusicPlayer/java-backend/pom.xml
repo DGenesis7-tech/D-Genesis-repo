@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        PARENT: Spring Boot's parent pom manages all dependency versions for us.
+        We inherit sensible defaults so we don't fight version conflicts.
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+        <relativePath/>
+    </parent>
+
+    <!--
+        PROJECT IDENTITY
+        groupId    = your organisation namespace (like a package name)
+        artifactId = this specific project's name
+        version    = SNAPSHOT means still in development
+    -->
+    <groupId>com.dgenesis</groupId>
+    <artifactId>wavebox</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>D-Genesis Wavebox</name>
+    <description>MP3 Player built with Spring Boot and Go</description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+
+        <!--
+            WEB: Gives us REST API support.
+            Includes embedded Tomcat server — no separate server install needed.
+            Adds @RestController, @GetMapping, @PostMapping etc.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--
+            JPA: Java Persistence API — lets us talk to databases
+            without writing raw SQL. Gives us @Entity, @Repository etc.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--
+            H2: Lightweight in-memory database.
+            Perfect for development — no MySQL install needed.
+            Data resets on every restart (we'll swap for MySQL in production).
+            scope=runtime means it's only needed when running, not compiling.
+        -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--
+            VALIDATION: Gives us @NotBlank, @Size, @Email etc.
+            on our model fields and DTOs.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--
+            LOMBOK: Reduces boilerplate.
+            @Data generates getters/setters/equals/hashCode/toString.
+            @Builder generates a builder pattern.
+            @RequiredArgsConstructor generates constructors.
+            optional=true means it's not included in the final jar.
+        -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--
+            TEST: JUnit 5 + Spring test utilities.
+            scope=test means this is ONLY available in the test folder.
+            Your production code cannot import test libraries.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--
+                This plugin does two things:
+                1. Packages everything into one runnable jar
+                2. Excludes Lombok from the final jar (it's only needed at compile time)
+            -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
