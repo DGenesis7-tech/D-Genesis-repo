@@ -17,7 +17,7 @@
 
     <!--
         PROJECT IDENTITY
-        groupId    = your organisation namespace (like a package name)
+        groupId    = your organization namespace (like a package name)
         artifactId = this specific project's name
         version    = SNAPSHOT means still in development
     -->

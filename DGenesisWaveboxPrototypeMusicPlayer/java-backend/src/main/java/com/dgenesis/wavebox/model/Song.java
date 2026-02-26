@@ -9,12 +9,12 @@ public class Song {
     private int durationSeconds; // Duration in seconds
     private String fileName;
     private String OriginalFileName;
-    private String fileSizeBytes;
+    private Long fileSizeBytes;
 
     public Song() {
     }
 
-    public Song(Long id, String title, String artist, String album, String genre, int durationSeconds, String fileName, String originalFileName, String fileSizeBytes) {
+    public Song(Long id, String title, String artist, String album, String genre, int durationSeconds, String fileName, String originalFileName, Long fileSizeBytes) {
         this.id = id;
         this.title = title;
         this.artist = artist;
@@ -90,13 +90,45 @@ public class Song {
         OriginalFileName = originalFileName;
     }
 
-    public String getFileSizeBytes() {
+    public Long getFileSizeBytes() {
         return fileSizeBytes;
     }
 
-    public void setFileSizeBytes(String fileSizeBytes) {
+    public void setFileSizeBytes(long fileSizeBytes) {
         this.fileSizeBytes = fileSizeBytes;
     }
 
-    
+    public String getFormatedDuration() {
+        if (durationSeconds <= 0 || durationSeconds >= 3600) {
+            return "00:00";
+        }
+        int minutes = durationSeconds / 60;
+        int seconds = durationSeconds % 60;
+        return String.format("%02d:%02d", minutes, seconds);
+    }
+
+    public boolean isValid() {
+        if (title != null && !title.trim().isEmpty()
+            && artist != null && !artist.trim().isEmpty()
+            && fileName != null && !fileName.trim().isEmpty()) {
+            return true;
+            }
+        return false;   
+    }
+
+    public String toString() {
+        return "Song{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", album='" + album + '\'' +
+                ", genre='" + genre + '\'' +
+                ", durationSeconds=" + durationSeconds +
+                ", fileName='" + fileName + '\'' +
+                ", OriginalFileName='" + OriginalFileName + '\'' +
+                ", fileSizeBytes='" + fileSizeBytes + '\'' +
+                '}';
+    }
+
+
 }
