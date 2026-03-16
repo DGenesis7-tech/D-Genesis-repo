@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func ch41() {
 	y := 3
 	x := y
 	y++

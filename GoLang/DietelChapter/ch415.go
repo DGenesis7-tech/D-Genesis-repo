@@ -2,40 +2,40 @@ package main
 
 import "fmt"
 
-func main() {
-	age := 70
+func ch415() {
+    age := 70
 
-	if age >= 65 {
-		fmt.Println("Age is greater than or equal to 65")
-	} else {
-		fmt.Println("Age is less than 65")
-	}
+    if age >= 65 {
+        fmt.Println("Age is greater than or equal to 65")
+    } else {
+        fmt.Println("Age is less than 65")
+    }
 
-	x := 1
-	total := 0
+    x := 1
+    total := 0
 
-	for x <= 10 {
-		total += x
-		fmt.Println("x is:", x)
-		x++
-	}
+    for x <= 10 {
+        total += x
+        fmt.Println("x is:", x)
+        x++
+    }
 
-	fmt.Println("Total is:", total)
+    fmt.Println("Total is:", total)
 
-	x := 1
-	total := 0
+    x = 1
+    total = 0
 
-	for x <= 100 {
-		total += x
-		x++
-	}
+    for x <= 100 {
+        total += x
+        x++
+    }
 
-	fmt.Println("Total:", total)
+    fmt.Println("Total:", total)
 
-	y := 5
+    y := 5
 
-	for y != 0 {
-		fmt.Println(y)
-		y--
-	}
+    for y != 0 {
+        fmt.Println(y)
+        y--
+    }
 }

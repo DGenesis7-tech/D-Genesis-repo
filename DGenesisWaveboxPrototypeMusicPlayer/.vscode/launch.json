@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "SongRunner",
+            "request": "launch",
+            "mainClass": "com.dgenesis.wavebox.model.SongRunner",
+            "projectName": "wavebox"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
