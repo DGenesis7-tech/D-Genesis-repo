@@ -14,12 +14,10 @@ public class Product {
     }
 
     public String getId() { return id; }
-    public String getName() { return name; }
     public double getPrice() { return price; }
-    public int getStock() { return stock; }
 
-    public void reduceStock(int quantity) {
-        if (quantity <= stock) stock -= quantity;
-        else throw new IllegalArgumentException("Not enough stock");
+    public void reduceStock(int qty) {
+        if (qty > stock) throw new IllegalArgumentException("Out of stock");
+        stock -= qty;
     }
 }

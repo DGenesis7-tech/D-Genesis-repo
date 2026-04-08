@@ -2,6 +2,7 @@ package services;
 
 import dtos.request.PlaceOrderRequest;
 import dtos.response.PlaceOrderResponse;
+import models.Customer;
 import models.Order;
 import models.Product;
 import repository.OrderRepo;
@@ -16,7 +17,6 @@ public class OrderServiceImpl implements OrderService {
         this.productRepo = productRepo;
     }
 
-    @Override
     public PlaceOrderResponse placeOrder(PlaceOrderRequest request) {
 
         Product product = productRepo.findById(request.getProductId());
@@ -27,18 +27,18 @@ public class OrderServiceImpl implements OrderService {
         double total = product.getPrice() * request.getQuantity();
 
         Order order = orderRepo.findById(request.getOrderId());
-        if (order == null) {
-            order = new Order(request.getOrderId(), "T1", "DINE-IN");
-        }
+        if (order == null) order = new Order(request.getOrderId());
 
         order.addAmount(total);
+
         orderRepo.save(order);
+        productRepo.save(product);
 
-        PlaceOrderResponse response = new PlaceOrderResponse();
-        response.setMessage("Order placed successfully");
-        response.setTotalAmount(order.getTotalAmount());
+        PlaceOrderResponse res = new PlaceOrderResponse();
+        res.setMessage("Order placed successfully");
+        res.setTotalAmount(order.getTotalAmount());
 
-        return response;
+        return res;
     }
 
 }

@@ -8,5 +8,6 @@ public class PlaceOrderResponse {
     public void setMessage(String message) { this.message = message; }
 
     public double getTotalAmount() { return totalAmount; }
-    public void setTotalAmount(double totalAmount) { this.totalAmount = totalAmount; }
+    public void setTotalAmount(double totalAmount) { this.totalAmount = totalAmount;
+    }
 }

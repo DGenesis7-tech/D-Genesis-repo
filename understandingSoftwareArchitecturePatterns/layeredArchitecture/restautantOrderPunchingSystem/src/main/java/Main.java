@@ -1,27 +1,30 @@
 import controller.OrderController;
 import dtos.response.PlaceOrderResponse;
+import models.Customer;
 import models.Product;
-import repository.OrderRepo;
-import repository.OrderRepoImpl;
-import repository.ProductRepo;
-import repository.ProductRepoImpl;
+import repository.*;
 import services.OrderService;
 import services.OrderServiceImpl;
+import services.PaymentService;
+import services.PaymentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
 
+        CustomerRepo customerRepo = new CustomerRepoImpl();
         ProductRepo productRepo = new ProductRepoImpl();
         OrderRepo orderRepo = new OrderRepoImpl();
 
+        customerRepo.save(new Customer("C1", "Daniel", "mail", 10000));
         productRepo.save(new Product("P1", "Burger", 2500, 10));
 
-        OrderService service = new OrderServiceImpl(orderRepo, productRepo);
-        OrderController controller = new OrderController(service);
+        OrderService orderService = new OrderServiceImpl(orderRepo, productRepo);
+        PaymentService paymentService = new PaymentServiceImpl(customerRepo, orderRepo);
 
-        PlaceOrderResponse response = controller.placeOrder("O1", "P1", 2);
+        OrderController controller = new OrderController(orderService);
 
-        System.out.println(response.getMessage());
-        System.out.println("Total: " + response.getTotalAmount());
+        controller.placeOrder("O1", "C1", "P1", 2);
+
+        System.out.println(paymentService.pay("C1", "O1"));
     }
 }

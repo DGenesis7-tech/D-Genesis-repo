@@ -10,29 +10,22 @@ public class Order {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private double totalAmount;
+    private String id;
+    private String status;
 
-    public Order(String orderNumber, String tableNumber, String orderType) {
-        this.orderNumber = orderNumber;
-        this.tableNumber = tableNumber;
-        this.orderType = orderType;
-        this.orderStatus = "PENDING";
-        this.startTime = LocalDateTime.now();
+    public Order(String id) {
+        this.id = id;
+        this.status = "PENDING";
     }
 
-    public void completeOrder() {
-        this.orderStatus = "COMPLETED";
-        this.endTime = LocalDateTime.now();
-    }
+    public String getId() { return id; }
+    public double getTotalAmount() { return totalAmount; }
 
     public void addAmount(double amount) {
         totalAmount += amount;
     }
 
-    public double getTotalAmount() {
-        return totalAmount;
-    }
-
-    public String getOrderNumber() {
-        return orderNumber;
-    }
+    public void complete() {
+        status = "COMPLETED";
+        }
 }
