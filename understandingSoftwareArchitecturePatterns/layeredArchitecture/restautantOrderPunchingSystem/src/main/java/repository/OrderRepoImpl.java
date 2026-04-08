@@ -1,6 +1,8 @@
-package java.repository;
+package repository;
 
-import java.models.Order;
+
+import models.Order;
+
 import java.util.HashMap;
 import java.util.Map;
 

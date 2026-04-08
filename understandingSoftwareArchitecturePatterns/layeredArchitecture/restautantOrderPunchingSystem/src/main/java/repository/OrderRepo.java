@@ -1,6 +1,7 @@
-package java.repository;
+package repository;
 
-import java.models.Order;
+
+import models.Order;
 
 public interface OrderRepo {
     void save(Order order);

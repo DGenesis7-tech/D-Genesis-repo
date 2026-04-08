@@ -1,6 +1,7 @@
-package java.repository;
+package repository;
 
-import java.models.Customer;
+
+import models.Customer;
 
 public interface CustomerRepo {
     void save(Customer customer);

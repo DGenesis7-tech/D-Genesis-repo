@@ -1,6 +1,7 @@
-package java.repository;
+package repository;
 
-import java.models.Product;
+
+import models.Product;
 
 public interface ProductRepo {
     void save(Product product);

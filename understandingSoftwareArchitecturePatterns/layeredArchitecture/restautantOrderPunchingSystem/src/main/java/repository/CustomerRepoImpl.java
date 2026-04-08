@@ -1,6 +1,8 @@
-package java.repository;
+package repository;
 
-import java.models.Customer;
+
+import models.Customer;
+
 import java.util.HashMap;
 import java.util.Map;
 
