@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3c4f95c-de99-445e-9fe9-9b2a5b6d02d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../RegEx.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Java_projects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Regex/Regex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Regex/test/RegexProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CloudDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PostDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PostSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PostSerializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../capsProjectPrototypes/iGoSaveApp/demo/.idea/iGoSaveAppP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../capsProjectPrototypes/iGoSaveApp/iGoSaveAppP/.idea/iGoSaveAppP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../task/task.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/Revision/readingData" value="39Wkzxv7kPMJduF1pBbQ6Ud4txf" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="39Wkzxv7kPMJduF1pBbQ6Ud4txf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CloudDataReader.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.PostSerializerTest.executor": "Run",
+    "JUnit.PostSerializerTest.testDeserialization.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "holiday",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/Revision/readingData/src/Main.java",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PostSerializerTest.testDeserialization">
+    <configuration name="PostSerializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="readingData" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostSerializerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostSerializerTest.testDeserialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="readingData" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostSerializerTest" />
+      <option name="METHOD_NAME" value="testDeserialization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PostSerializerTest.testDeserialization" />
+        <item itemvalue="JUnit.PostSerializerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3c4f95c-de99-445e-9fe9-9b2a5b6d02d2" name="Changes" comment="" />
+      <created>1770819481196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770819481196</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

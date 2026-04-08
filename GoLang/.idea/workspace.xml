@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39b9ebaf-f953-4096-961e-43960bbd6543" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../RegEx.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/libraries/Java_projects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/Regex/Regex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/Regex/test/RegexProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/Revision.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/CloudDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/FileClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/FileServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/PostDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/PostSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/PostSerializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Revision/readingData/src/shared" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../capsProjectPrototypes/iGoSaveApp/demo/.idea/iGoSaveAppP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../capsProjectPrototypes/iGoSaveApp/iGoSaveAppP/.idea/iGoSaveAppP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task/task.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/GoLang" value="39lmBMCe6clE4a9A2mM7aayeoIK" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="39lmBMCe6clE4a9A2mM7aayeoIK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "holiday",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/GoLang",
+    "onboarding.tips.debug.path": "C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/GoLang/DietelChapter/src/Main.java",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39b9ebaf-f953-4096-961e-43960bbd6543" name="Changes" comment="" />
+      <created>1771278895022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771278895022</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="246d74e2-f516-4b02-959b-eeb60c7cad56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jdbcAccountManagementApp/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/run-windows.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/run-windows.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/main/YourContactApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../task/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/.idea/SweepConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/.idea/SweepConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/models/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/models/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/services/UserServiceJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/services/UserServiceJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/ValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../yourContact/src/main/java/org/example/utils/ValidationUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/fcmbJavaApisPractical/fcmbApisPractical" value="38yMOJjf7Ypavlu7nzE3pExDoDA" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="38yMOJjf7Ypavlu7nzE3pExDoDA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "holiday",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "DSTables",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\DANIEL~1\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="3ef116b9-155a-4a61-9362-2a2be91506d8" />
+        <option name="reportName" value="fcmbApisPractical/qodana/2026-01-30" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\DANIEL~1\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="3ef116b9-155a-4a61-9362-2a2be91506d8" reportId="fcmbApisPractical/qodana/2026-01-30" />
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="246d74e2-f516-4b02-959b-eeb60c7cad56" name="Changes" comment="" />
+      <created>1769767324824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769767324824</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

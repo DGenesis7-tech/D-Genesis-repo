@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4ff8b5e-5c3f-4266-a180-30575ba4f658" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Games/PYTHON/TIC-TAC-TOE/.idea/TIC-TAC-TOE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/models/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/models/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/models/Contacts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/repositories/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/repositories/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/repositories/ContactsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactManagerApp/src/data/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/models/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/models/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repositories/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/controllers/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/models/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/models/ContactList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/ContactListRepositories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/ContactListRepositoriesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/DeleteContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/RegisterUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/UserLoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/response/ContactResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/exceptions/AuthenticationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/exceptions/ContactNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/exceptions/InvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/exceptions/InvalidPinException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/services/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/utils/IdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/dGenesissTrafficSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/dGenesissTrafficSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/controllers/OfficerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/controllers/OfficerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/models/Officer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/models/Officer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/GenericTypesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/GenericTypesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/OfficerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/OfficerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Officers.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Officers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Owners.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Owners.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Vehicles.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/data/repositories/Vehicles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/requests/IssueTicketRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/requests/IssueTicketRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/requests/OfficerRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/requests/OfficerRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/responses/OfficerResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/dtos/responses/OfficerResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/OfficerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/OfficerServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/OfficerServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/OfficerServicesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/TicketServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/TicketServicesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/VehicleServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/services/VehicleServicesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/utils/Mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/out/production/dGenesissTrafficSystem/utils/Mapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/testTrafficSystem/repositoryTest/vehiclesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/testTrafficSystem/repositoryTest/vehiclesRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/controllers/OfficerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/controllers/OfficerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/models/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/models/Officer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/GenericTypesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/GenericTypesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/OfficerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/OfficerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Officers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Officers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Owners.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Owners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/data/repositories/Vehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/requests/IssueTicketRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/requests/IssueTicketRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/requests/OfficerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/requests/OfficerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/responses/OfficerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/dtos/responses/OfficerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/OfficerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/OfficerServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/OfficerServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/OfficerServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/VehicleServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/services/VehicleServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/utils/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../project/Java projects/Mr Chibuzo tasks/dGenesissTrafficSystem/trafficSystemSrc/utils/Mapper.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="38EyGWzi9K2fiBAiy25SrEpqwWm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;holiday&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/myContacts/src/main/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/myContacts/src/main/java/org/example/Main.java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="repositories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel Genesis\Desktop\D-Genesis-repo\project_holiday\myContacts\src\data\repositories" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4ff8b5e-5c3f-4266-a180-30575ba4f658" name="Changes" comment="" />
+      <created>1768378933030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768378933030</updated>
+    </task>
+    <servers />
+  </component>
+</project>

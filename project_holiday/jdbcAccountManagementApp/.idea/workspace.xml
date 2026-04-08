@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad933ff5-d172-4f05-b7ae-1b6fc087ce7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../fcmbJavaApisPractical/untitled/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/run-windows.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/run-windows.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/main/YourContactApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../task/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../task/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../task/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/.idea/SweepConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/.idea/SweepConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/controllers/UserControllerJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/models/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/models/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/data/repositories/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/CreateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/requests/UpdateContactRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/dtos/responses/ContactResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/services/UserServiceJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/services/UserServiceJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/utils/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/utils/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/utils/ValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../yourContact/src/main/java/org/example/utils/ValidationUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/jdbcAccountManagementApp" value="38We9LsmkKYG6QDpg8VqDK0DrYr" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="38We9LsmkKYG6QDpg8VqDK0DrYr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;dev.sweep.assistant.data.RecentlyUsedFiles&quot;: &quot;src\\db\\DatabaseConfigProperties.java&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;holiday&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Daniel Genesis/Desktop/D-Genesis-repo/project_holiday/jdbcAccountManagementApp/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;sweep.chatMode&quot;: &quot;Agent&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="db" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad933ff5-d172-4f05-b7ae-1b6fc087ce7b" name="Changes" comment="" />
+      <created>1768919602045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768919602045</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
