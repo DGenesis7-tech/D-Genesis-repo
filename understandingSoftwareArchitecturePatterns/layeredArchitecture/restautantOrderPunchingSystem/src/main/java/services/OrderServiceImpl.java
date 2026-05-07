@@ -34,11 +34,11 @@ public class OrderServiceImpl implements OrderService {
         orderRepo.save(order);
         productRepo.save(product);
 
-        PlaceOrderResponse res = new PlaceOrderResponse();
-        res.setMessage("Order placed successfully");
-        res.setTotalAmount(order.getTotalAmount());
+        PlaceOrderResponse response = new PlaceOrderResponse();
+        response.setMessage("Order placed successfully");
+        response.setTotalAmount(order.getTotalAmount());
 
-        return res;
+        return response;
     }
 
 }
