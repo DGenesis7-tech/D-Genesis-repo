@@ -21,9 +21,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: portfolio/dGenesisPortfolio/portfolio-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,13 +36,13 @@ jobs:
         run: |
           node --version
           npm --version
-          npm ci
+          npm ci --prefix portfolio/dGenesisPortfolio/portfolio-site
 
       - name: Build static site
-        run: npm run build
+        run: npm run build --prefix portfolio/dGenesisPortfolio/portfolio-site
 
       - name: Disable Jekyll
-        run: touch out/.nojekyll
+        run: touch portfolio/dGenesisPortfolio/portfolio-site/out/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
