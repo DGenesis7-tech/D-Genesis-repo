@@ -36,7 +36,7 @@ jobs:
         run: |
           node --version
           npm --version
-          npm ci --prefix portfolio/dGenesisPortfolio/portfolio-site
+          npm ci --prefix portfolio/dGenesisPortfolio/portfolio-site || npm install --prefix portfolio/dGenesisPortfolio/portfolio-site --legacy-peer-deps --no-audit --no-fund
 
       - name: Build static site
         run: npm run build --prefix portfolio/dGenesisPortfolio/portfolio-site
