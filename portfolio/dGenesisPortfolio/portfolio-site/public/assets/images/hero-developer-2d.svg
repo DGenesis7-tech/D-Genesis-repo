@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">2D developer portfolio hero illustration</title>
+  <desc id="desc">A clean 2D illustration of a developer with a laptop, brand circle, and floating technology cards.</desc>
+  <rect width="1200" height="900" fill="#09090b"/>
+  <circle cx="610" cy="420" r="300" fill="#2dd4bf"/>
+  <circle cx="610" cy="420" r="242" fill="#0f172a" opacity=".18"/>
+  <g fill="#111827" stroke="#5eead4" stroke-opacity=".45" stroke-width="3">
+    <rect x="115" y="160" width="185" height="82" rx="22"/>
+    <rect x="880" y="170" width="205" height="82" rx="22"/>
+    <rect x="135" y="620" width="215" height="82" rx="22"/>
+    <rect x="835" y="625" width="225" height="82" rx="22"/>
+  </g>
+  <g fill="#ccfbf1" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" text-anchor="middle">
+    <text x="207" y="214">React</text>
+    <text x="982" y="224">Next.js</text>
+    <text x="242" y="674">Java</text>
+    <text x="948" y="679">APIs</text>
+  </g>
+  <g>
+    <ellipse cx="600" cy="784" rx="260" ry="42" fill="#020617" opacity=".38"/>
+    <path d="M430 760c18-190 76-304 174-304 100 0 160 114 178 304z" fill="#0f766e"/>
+    <path d="M475 760c10-105 42-180 128-180 88 0 120 75 130 180z" fill="#14b8a6"/>
+    <circle cx="604" cy="330" r="118" fill="#c8916d"/>
+    <path d="M487 323c12-92 82-142 162-112 57 21 88 67 78 129-69-44-140-49-240-17z" fill="#111827"/>
+    <path d="M530 348c26 25 48 35 74 35 28 0 50-10 76-35" fill="none" stroke="#7c2d12" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="562" cy="318" r="9" fill="#1f2937"/>
+    <circle cx="650" cy="318" r="9" fill="#1f2937"/>
+    <path d="M394 538c-90 58-142 132-152 221h72c22-67 62-119 121-156z" fill="#c8916d"/>
+    <path d="M805 537c90 58 142 132 152 221h-72c-22-67-62-119-121-156z" fill="#c8916d"/>
+    <rect x="385" y="580" width="430" height="208" rx="28" fill="#111827" stroke="#99f6e4" stroke-opacity=".55" stroke-width="5"/>
+    <rect x="428" y="624" width="180" height="16" rx="8" fill="#5eead4"/>
+    <rect x="428" y="666" width="285" height="16" rx="8" fill="#334155"/>
+    <rect x="428" y="708" width="230" height="16" rx="8" fill="#334155"/>
+    <circle cx="746" cy="658" r="36" fill="#2dd4bf" opacity=".9"/>
+  </g>
+  <g opacity=".9">
+    <circle cx="410" cy="198" r="11" fill="#f97316"/>
+    <circle cx="784" cy="166" r="9" fill="#facc15"/>
+    <circle cx="1020" cy="505" r="12" fill="#5eead4"/>
+    <circle cx="192" cy="482" r="9" fill="#38bdf8"/>
+  </g>
+</svg>

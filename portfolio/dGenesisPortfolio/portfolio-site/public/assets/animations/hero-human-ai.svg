@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Human developer and humanoid software assistant animation</title>
+  <desc id="desc">A stylized 2D animated portfolio image with a developer, humanoid software assistant, and floating interface panels.</desc>
+  <style>
+    .bg{fill:#09090b}.panel{fill:#111827;stroke:#2dd4bf;stroke-opacity:.32;stroke-width:2}.line{stroke:#5eead4;stroke-width:8;stroke-linecap:round}.muted{stroke:#64748b;stroke-width:7;stroke-linecap:round}.skin{fill:#d6a47a}.hair{fill:#18181b}.shirt{fill:#2dd4bf}.dark{fill:#27272a}.bot{fill:#d9f99d}.bot2{fill:#94a3b8}.glow{fill:#2dd4bf;opacity:.22}.cyan{fill:#22d3ee}.float{animation:float 5.5s ease-in-out infinite}.float2{animation:float 6.5s ease-in-out infinite reverse}.pulse{animation:pulse 2.6s ease-in-out infinite}.scan{animation:scan 4s linear infinite}.arm{transform-origin:470px 415px;animation:wave 3.2s ease-in-out infinite}.botarm{transform-origin:742px 410px;animation:botwave 3.4s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes scan{0%{transform:translateX(-180px)}100%{transform:translateX(180px)}}@keyframes wave{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(12deg)}}@keyframes botwave{0%,100%{transform:rotate(8deg)}50%{transform:rotate(-12deg)}}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <circle class="glow pulse" cx="600" cy="360" r="260"/>
+  <circle cx="600" cy="360" r="330" fill="none" stroke="#2dd4bf" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="600" cy="360" r="230" fill="none" stroke="#22d3ee" stroke-opacity=".12" stroke-width="2"/>
+  <g class="float">
+    <rect class="panel" x="110" y="110" width="275" height="170" rx="20"/>
+    <path class="line" d="M150 158h112M150 196h185M150 234h142"/>
+    <path class="muted" d="M305 158h40M360 196h-28"/>
+  </g>
+  <g class="float2">
+    <rect class="panel" x="805" y="120" width="270" height="182" rx="20"/>
+    <path class="line" d="M846 168h84M846 208h170M846 248h118"/>
+    <circle class="cyan pulse" cx="1010" cy="166" r="18"/>
+  </g>
+  <g>
+    <ellipse cx="470" cy="620" rx="165" ry="34" fill="#000" opacity=".32"/>
+    <path class="skin" d="M440 260c0-50 39-86 86-86s86 36 86 86-38 92-86 92-86-42-86-92z"/>
+    <path class="hair" d="M438 256c5-67 54-104 105-92 44 10 75 43 72 90-28-22-65-27-109-15-21 5-43 11-68 17z"/>
+    <path class="shirt" d="M388 586c12-136 56-211 139-211s128 75 141 211z"/>
+    <path class="dark" d="M438 585h52v92h-70zM563 585h52l18 92h-75z"/>
+    <path class="skin arm" d="M409 415c-64 33-95 81-92 141h38c9-43 34-76 77-101z"/>
+    <path class="skin" d="M646 419c64 31 101 72 111 122l-36 14c-19-43-50-72-93-96z"/>
+  </g>
+  <g>
+    <ellipse cx="750" cy="620" rx="155" ry="34" fill="#000" opacity=".28"/>
+    <path class="bot2" d="M690 586c10-132 50-210 121-210s111 78 122 210z"/>
+    <circle class="bot" cx="812" cy="260" r="86"/>
+    <path fill="#111827" d="M760 266c32-34 71-34 104 0-22 18-67 18-104 0z"/>
+    <circle class="cyan pulse" cx="780" cy="254" r="9"/>
+    <circle class="cyan pulse" cx="844" cy="254" r="9"/>
+    <path class="botarm" fill="#cbd5e1" d="M704 410c-63 26-96 68-102 126l37 9c15-42 43-73 85-94z"/>
+    <path fill="#cbd5e1" d="M918 414c58 35 87 75 90 121l-36 12c-13-38-37-68-73-90z"/>
+  </g>
+  <g class="float">
+    <rect class="panel" x="455" y="405" width="295" height="166" rx="18"/>
+    <path class="line scan" d="M505 450h140"/>
+    <path class="muted" d="M505 492h202M505 530h154"/>
+  </g>
+  <g class="pulse">
+    <circle class="cyan" cx="600" cy="170" r="8"/>
+    <circle class="cyan" cx="690" cy="214" r="6"/>
+    <circle class="cyan" cx="520" cy="208" r="6"/>
+    <path d="M600 170l90 44M600 170l-80 38" fill="none" stroke="#22d3ee" stroke-opacity=".5" stroke-width="2"/>
+  </g>
+</svg>

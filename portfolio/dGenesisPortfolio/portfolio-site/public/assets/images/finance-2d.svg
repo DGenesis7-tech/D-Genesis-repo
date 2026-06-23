@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="2D savings dashboard illustration">
+  <rect width="900" height="560" fill="#09090b"/><circle cx="560" cy="238" r="205" fill="#2dd4bf"/>
+  <rect x="385" y="94" width="350" height="300" rx="30" fill="#111827" stroke="#ccfbf1" stroke-opacity=".45" stroke-width="3"/>
+  <rect x="430" y="145" width="145" height="18" rx="9" fill="#5eead4"/><rect x="430" y="190" width="240" height="16" rx="8" fill="#334155"/><rect x="430" y="235" width="205" height="16" rx="8" fill="#334155"/>
+  <rect x="430" y="305" width="230" height="22" rx="11" fill="#1e293b"/><rect x="430" y="305" width="168" height="22" rx="11" fill="#2dd4bf"/>
+  <circle cx="668" cy="163" r="42" fill="none" stroke="#5eead4" stroke-width="15" stroke-dasharray="175 75"/>
+  <ellipse cx="250" cy="470" rx="116" ry="24" fill="#020617" opacity=".4"/><circle cx="250" cy="185" r="58" fill="#c8916d"/><path d="M194 178c8-54 49-84 96-64 31 13 49 38 47 70-44-22-86-22-143-6z" fill="#111827"/>
+  <path d="M165 430c11-122 45-190 87-190s78 68 91 190z" fill="#14b8a6"/><path d="M178 305c-50 34-78 74-84 119h39c12-34 35-62 67-82z" fill="#c8916d"/><path d="M325 305c55 25 90 62 105 110l-35 15c-18-36-45-65-83-86z" fill="#c8916d"/>
+</svg>

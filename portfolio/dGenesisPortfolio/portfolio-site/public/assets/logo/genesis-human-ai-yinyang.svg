@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Genesis Inc human and software yin yang mark</title>
+  <defs>
+    <clipPath id="circle"><circle cx="128" cy="128" r="112"/></clipPath>
+  </defs>
+  <rect width="256" height="256" fill="none"/>
+  <circle cx="128" cy="128" r="118" fill="#09090b" stroke="#2dd4bf" stroke-width="10"/>
+  <g clip-path="url(#circle)">
+    <path d="M128 16a112 112 0 0 1 0 224c38-21 38-91 0-112S90 37 128 16Z" fill="#2dd4bf"/>
+    <path d="M128 16a112 112 0 0 0 0 224c-38-21-38-91 0-112s38-91 0-112Z" fill="#111827"/>
+    <path d="M77 124c15-34 45-55 80-55 10 0 21 2 32 6-19 8-32 23-40 43-16-10-34-12-55-7-7 2-12 6-17 13Z" fill="#f4f4f5" opacity=".95"/>
+    <path d="M71 145c19 29 49 44 87 42-12 17-30 27-53 27-25 0-47-14-59-35 10-11 18-22 25-34Z" fill="#f4f4f5" opacity=".92"/>
+    <path d="M146 65c20 3 37 12 51 28l-21 14m-18 9h36m-50 24h52m-48 24h35" fill="none" stroke="#09090b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="128" cy="72" r="18" fill="#111827"/>
+    <circle cx="128" cy="184" r="18" fill="#2dd4bf"/>
+  </g>
+</svg>

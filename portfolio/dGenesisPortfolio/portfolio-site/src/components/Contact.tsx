@@ -1,0 +1,44 @@
+const contactLinks = [
+  { label: "Email Daniel", href: "mailto:danielokp328@gmail.com?subject=Project%20Inquiry%20for%20Daniel%20Genesis" },
+  { label: "GitHub", href: "https://github.com/DGenesis7-tech" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/DanielGenesis" },
+  { label: "Live Portfolio", href: "https://danielgenesis.vercel.app" },
+];
+
+export default function Contact() {
+  return (
+    <section className="border-t border-white/10 bg-zinc-900/50" id="contact">
+      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-20 md:grid-cols-[1fr_0.8fr]">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300">
+            Contact
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-white">
+            Need a dependable developer for your next build?
+          </h2>
+          <p className="mt-5 max-w-2xl leading-8 text-zinc-300">
+            Send a short brief with your idea, timeline, and budget. I can help
+            with MVPs, dashboards, APIs, marketplace flows, payment features,
+            and modern frontend redesigns.
+          </p>
+          <p className="mt-5 text-sm font-semibold text-teal-300">
+            Based in Lagos, Nigeria. Available for remote freelance work.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center gap-3">
+          {contactLinks.map((link) => (
+            <a
+              className="rounded-lg border border-white/10 bg-zinc-950 px-5 py-4 font-semibold text-white transition hover:border-teal-300 hover:text-teal-300"
+              href={link.href}
+              key={link.label}
+              rel="noreferrer"
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
