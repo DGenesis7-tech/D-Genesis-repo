@@ -2,7 +2,7 @@ const contactLinks = [
   { label: "Email Daniel", href: "mailto:danielokp328@gmail.com?subject=Project%20Inquiry%20for%20Daniel%20Genesis" },
   { label: "GitHub", href: "https://github.com/DGenesis7-tech" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/DanielGenesis" },
-  { label: "Live Portfolio", href: "https://danielgenesis.vercel.app" },
+  { label: "Live Portfolio", href: "https://dgenesis7-tech.github.io/D-Genesis-repo/" },
 ];
 
 export default function Contact() {

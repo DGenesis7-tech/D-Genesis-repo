@@ -16,6 +16,10 @@ builds/
 .DS_Store
 Thumbs.db
 
+# Local archives (keep outside git)
+portfolio/dGenesisPortfolio.zip
+portfolio/dGenesisPortfolio/portfolio-site.zip
+
 # Java
 *.class
 *.jar

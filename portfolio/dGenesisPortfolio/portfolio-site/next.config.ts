@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
+const githubBasePath = "/D-Genesis-repo";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -8,7 +9,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isGitHubPages ? "/D-Genesis-repo" : "",
+  basePath: isGitHubPages ? githubBasePath : "",
+  assetPrefix: isGitHubPages ? githubBasePath : "",
   reactCompiler: true,
 };
 

@@ -1,5 +1,6 @@
 package com.farmershub.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,6 +11,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "users")
+@JsonIgnoreProperties({"password","authorities","accountNonExpired","accountNonLocked","credentialsNonExpired","enabled","username","hibernateLazyInitializer","handler"})
 @Data              // Lombok: generates getters, setters, toString
 @NoArgsConstructor // Lombok: generates empty constructor
 @AllArgsConstructor

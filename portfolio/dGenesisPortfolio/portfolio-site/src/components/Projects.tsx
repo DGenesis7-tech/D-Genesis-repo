@@ -49,34 +49,30 @@ export default function Projects() {
                 >
                   Open browser prototype
                 </a>
-                <div className="mt-3 grid grid-cols-2 gap-2">
-                  <a
-                    aria-disabled={!project.designLinks.canva}
-                    className={`rounded-md border px-3 py-2 text-center text-xs font-semibold transition ${
-                      project.designLinks.canva
-                        ? "border-teal-300/50 text-teal-200 hover:bg-teal-300/10"
-                        : "pointer-events-none border-white/10 text-zinc-500"
-                    }`}
-                    href={project.designLinks.canva ?? "#"}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Canva preview
-                  </a>
-                  <a
-                    aria-disabled={!project.designLinks.figma}
-                    className={`rounded-md border px-3 py-2 text-center text-xs font-semibold transition ${
-                      project.designLinks.figma
-                        ? "border-teal-300/50 text-teal-200 hover:bg-teal-300/10"
-                        : "pointer-events-none border-white/10 text-zinc-500"
-                    }`}
-                    href={project.designLinks.figma ?? "#"}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    Figma preview
-                  </a>
-                </div>
+                {(project.designLinks.canva || project.designLinks.figma) && (
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    {project.designLinks.canva && (
+                      <a
+                        className="rounded-md border border-teal-300/50 px-3 py-2 text-center text-xs font-semibold text-teal-200 transition hover:bg-teal-300/10"
+                        href={project.designLinks.canva}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        Canva preview
+                      </a>
+                    )}
+                    {project.designLinks.figma && (
+                      <a
+                        className="rounded-md border border-teal-300/50 px-3 py-2 text-center text-xs font-semibold text-teal-200 transition hover:bg-teal-300/10"
+                        href={project.designLinks.figma}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        Figma preview
+                      </a>
+                    )}
+                  </div>
+                )}
                 <a
                   className="mt-3 text-center text-sm font-semibold text-teal-300 transition hover:text-teal-200"
                   href={project.href}

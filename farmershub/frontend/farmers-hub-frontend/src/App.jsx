@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
-import HomePage from './pages/HomePage.jsx';
+import MarketplacePage from './pages/MarketplacePage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 
 // Guard: redirect to login if not logged in
@@ -19,10 +19,10 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/" element={
-            <PrivateRoute><HomePage /></PrivateRoute>
+            <PrivateRoute><MarketplacePage /></PrivateRoute>
           } />
           <Route path="/chat" element={
-            <PrivateRoute><HomePage /></PrivateRoute>
+            <PrivateRoute><MarketplacePage /></PrivateRoute>
           } />
           <Route path="/profile/:userId" element={
             <PrivateRoute><ProfilePage /></PrivateRoute>
