@@ -6,57 +6,51 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio/dGenesisPortfolio/portfolio-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: portfolio-site/package-lock.json
+          cache-dependency-path: portfolio/dGenesisPortfolio/portfolio-site/package-lock.json
 
       - name: Install dependencies
-        run: |
-          cd portfolio-site
-          npm ci
+        run: npm install
 
       - name: Build site
-        run: |
-          cd portfolio-site
-          npm run build
+        run: npm run build
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./portfolio-site/out
-          if-no-files-found: error
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish to gh-pages branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf /tmp/portfolio-site-pages
+          mkdir -p /tmp/portfolio-site-pages
+          cp -R out/. /tmp/portfolio-site-pages/
+          cd /tmp/portfolio-site-pages
+          git init
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Deploy portfolio site"
+          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git push --force origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
