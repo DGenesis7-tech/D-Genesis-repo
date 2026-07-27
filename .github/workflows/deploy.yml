@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio/dGenesisPortfolio/portfolio-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,14 +35,10 @@ jobs:
           cache-dependency-path: portfolio/dGenesisPortfolio/portfolio-site/package-lock.json
 
       - name: Install dependencies
-        run: |
-          cd portfolio/dGenesisPortfolio/portfolio-site
-          npm install
+        run: npm install
 
       - name: Build site
-        run: |
-          cd portfolio/dGenesisPortfolio/portfolio-site
-          npm run build
+        run: npm run build
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
