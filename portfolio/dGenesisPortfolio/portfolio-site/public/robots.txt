@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genesisinc.github.io/genesisinc/sitemap.xml

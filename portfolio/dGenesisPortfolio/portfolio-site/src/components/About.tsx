@@ -24,11 +24,18 @@ export default function About() {
             usually come to me when they want thoughtful execution without the
             usual agency friction.
           </p>
-          <ul className="space-y-2 text-sm text-zinc-200">
-            <li>• Full-stack builds for startups and growing teams</li>
-            <li>• Clear product thinking with practical implementation</li>
-            <li>• Calm delivery from discovery through launch</li>
-          </ul>
+          <div className="grid gap-3 rounded-lg border border-teal-400/15 bg-teal-400/5 p-4 sm:grid-cols-3">
+            {[
+              { value: "10+", label: "product builds" },
+              { value: "4+", label: "years of delivery" },
+              { value: "100%", label: "remote collaboration" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-xl font-semibold text-white">{stat.value}</p>
+                <p className="text-sm text-zinc-400">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

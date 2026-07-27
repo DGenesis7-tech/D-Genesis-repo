@@ -26,6 +26,9 @@ export default function Contact() {
           </p>
         </div>
         <div className="flex flex-col justify-center gap-3">
+          <div className="rounded-lg border border-teal-400/15 bg-teal-400/5 p-4 text-sm text-zinc-300">
+            Best for: MVPs, dashboards, marketplaces, API systems, and redesigns.
+          </div>
           {contactLinks.map((link) => (
             <a
               className="rounded-lg border border-white/10 bg-zinc-950 px-5 py-4 font-semibold text-white transition hover:border-teal-300 hover:text-teal-300"
