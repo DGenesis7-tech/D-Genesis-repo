@@ -43,10 +43,19 @@ jobs:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
 
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p out
+          touch out/.nojekyll
+          if [ -d out ]; then
+            echo "Pages artifact folder exists"
+            find out -maxdepth 2 -type f | head
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./portfolio/dGenesisPortfolio/portfolio-site/out
+          path: ./out
           if-no-files-found: error
 
   deploy:
