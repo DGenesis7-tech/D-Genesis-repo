@@ -7,7 +7,7 @@ export default function About() {
             About
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white">
-            Reliable product engineering for serious founders and teams
+            From idea to launch, I bring product thinking and engineering discipline.
           </h2>
         </div>
         <div className="space-y-5 text-base leading-8 text-zinc-300">
@@ -19,10 +19,16 @@ export default function About() {
             e-commerce.
           </p>
           <p>
-            Clients get more than code. I bring clear communication, structured
-            delivery, and calm problem-solving shaped by software training,
-            engineering discipline, and hands-on hospitality leadership.
+            Whether you need an MVP, a redesign, or a dependable internal tool,
+            I focus on clarity, speed, and long-term maintainability. Clients
+            usually come to me when they want thoughtful execution without the
+            usual agency friction.
           </p>
+          <ul className="space-y-2 text-sm text-zinc-200">
+            <li>• Full-stack builds for startups and growing teams</li>
+            <li>• Clear product thinking with practical implementation</li>
+            <li>• Calm delivery from discovery through launch</li>
+          </ul>
         </div>
       </div>
     </section>

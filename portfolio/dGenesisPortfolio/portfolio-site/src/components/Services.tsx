@@ -2,32 +2,32 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Backend APIs and cloud-ready systems",
+    title: "MVPs and product builds",
     image: "/assets/images/service-backend-api.png",
     alt: "Backend API architecture with servers, REST routes, databases, and cloud deployment",
     description:
-      "Java Spring Boot or Node.js APIs with clean data models, REST routes, cloud-ready structure, and deployment discipline.",
+      "From discovery to launch, I turn ideas into working experiences with thoughtful UX, strong architecture, and fast iteration.",
   },
   {
-    title: "Frontend UI and responsive dashboards",
+    title: "Modern frontend experiences",
     image: "/assets/images/service-frontend-ui.png",
     alt: "Frontend UI work across desktop, tablet, and mobile screens",
     description:
-      "Modern React and Next.js interfaces that improve clarity, mobile usability, component structure, and client trust.",
+      "Responsive dashboards, customer-facing products, and polished interfaces that are clear, trustworthy, and easy to use.",
   },
   {
-    title: "Database, auth, and role-based access",
+    title: "Secure backends and integrations",
     image: "/assets/images/service-database-auth.png",
     alt: "Secure database and authentication system with roles and encrypted flows",
     description:
-      "Secure user accounts, JWT-style flows, admin/user roles, encrypted data patterns, and reliable database design.",
+      "APIs, auth flows, payment logic, admin tools, and third-party integrations built for reliability and maintainability.",
   },
   {
-    title: "Prototype and product design support",
+    title: "Prototype to production support",
     image: "/assets/images/service-prototype-design.png",
     alt: "Product prototype and design workflow with wireframes, feedback, and user flow panels",
     description:
-      "Clickable prototypes, user-flow thinking, feature planning, and polished product screens before full implementation.",
+      "Quick prototypes and product flows that help teams validate direction before scaling into a full build.",
   },
 ] as const;
 
@@ -39,7 +39,7 @@ export default function Services() {
           Services
         </p>
         <h2 className="mt-3 text-3xl font-bold text-white">
-          What I can help you ship
+          Where I create the most value
         </h2>
       </div>
       <div className="grid gap-4 md:grid-cols-2">

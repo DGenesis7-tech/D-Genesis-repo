@@ -8,8 +8,8 @@ const skillGroups = [
     skills: ["Java Spring Boot", "Node.js", "Express.js", "REST APIs", "Microservices", "JWT Auth"],
   },
   {
-    title: "Data and delivery",
-    skills: ["MongoDB", "PostgreSQL", "Firebase", "GitHub", "Postman", "Vercel", "Netlify"],
+    title: "Product and delivery",
+    skills: ["MVP planning", "User flows", "MongoDB", "PostgreSQL", "GitHub", "Vercel", "Remote collaboration"],
   },
 ];
 

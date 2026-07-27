@@ -14,15 +14,15 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white">
-            Need a dependable developer for your next build?
+            Ready to build something useful and well-crafted?
           </h2>
           <p className="mt-5 max-w-2xl leading-8 text-zinc-300">
-            Send a short brief with your idea, timeline, and budget. I can help
-            with MVPs, dashboards, APIs, marketplace flows, payment features,
-            and modern frontend redesigns.
+            Share your idea, timeline, and goals. I can help you shape the right
+            path forward, whether that means a quick prototype, a polished MVP,
+            or a full product build.
           </p>
           <p className="mt-5 text-sm font-semibold text-teal-300">
-            Based in Lagos, Nigeria. Available for remote freelance work.
+            Based in Lagos, Nigeria. Available for remote freelance work and product partnerships.
           </p>
         </div>
         <div className="flex flex-col justify-center gap-3">
