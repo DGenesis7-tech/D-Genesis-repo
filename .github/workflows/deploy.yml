@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd portfolio/dGenesisPortfolio/portfolio-site
-          npm ci
+          npm install
 
       - name: Build site
         run: |
