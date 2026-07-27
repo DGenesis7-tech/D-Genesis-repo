@@ -50,9 +50,14 @@ export default function ProjectPreview({ type }: ProjectPreviewProps) {
       <HumanProjectScene type={type} />
       <div className="project-preview-explainer">
         <strong>{detail.title}</strong>
-        <div>
+        <div className="mt-2 flex flex-wrap gap-2">
           {detail.points.map((point) => (
-            <span key={point}>{point}</span>
+            <span
+              className="rounded-full border border-teal-400/20 bg-teal-400/10 px-2.5 py-1 text-[11px] font-medium text-teal-100"
+              key={point}
+            >
+              {point}
+            </span>
           ))}
         </div>
       </div>

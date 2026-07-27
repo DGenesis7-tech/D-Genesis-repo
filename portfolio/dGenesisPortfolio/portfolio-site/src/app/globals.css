@@ -13,7 +13,9 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 28%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
@@ -86,6 +88,16 @@ html {
   }
 }
 
+@keyframes sheen {
+  0% {
+    transform: translateX(-140%);
+  }
+
+  100% {
+    transform: translateX(140%);
+  }
+}
+
 @keyframes human-wave {
   0%,
   100% {
@@ -133,6 +145,7 @@ html {
   transform-style: preserve-3d;
   animation: float-panel 8s ease-in-out infinite;
   box-shadow: 0 24px 80px rgba(20, 184, 166, 0.16);
+  border: 1px solid rgba(45, 212, 191, 0.16);
 }
 
 .hero-module {
@@ -248,16 +261,19 @@ html {
   bottom: 16px;
   z-index: 3;
   border: 1px solid rgba(45, 212, 191, 0.24);
-  border-radius: 8px;
-  background: rgba(9, 9, 11, 0.78);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(9, 9, 11, 0.92), rgba(9, 9, 11, 0.78));
   padding: 13px;
   backdrop-filter: blur(16px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.35);
 }
 
 .project-preview-explainer strong {
   display: block;
   color: white;
   font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   font-weight: 800;
 }
 
